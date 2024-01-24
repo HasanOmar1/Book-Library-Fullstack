@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #6baf8d;
+  --sb-size: 15px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+}
+.link {
+  color: bisque;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #00adb5;
+}
+
+#go-top {
+  position: fixed;
+  text-decoration: none;
+  color: white;
+  right: 3rem;
+  top: 88vh;
+  padding: 15px;
+  box-shadow: 0px 0px 0px 5px #a0a0a0, inset 0px 10px 27px -8px #141414,
+    inset 0px -10px 27px -8px #a31925, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  z-index: 999;
+}
+
+#go-top:hover {
+  color: green;
+  background-color: gold;
+}
+
+.back-btn {
+  width: fit-content;
+}
+.back-icon {
+  font-size: 1.2rem;
+}
+
+.back-btn-container {
+  margin-left: 20%;
+  padding-top: 1%;
+}
+
+.great-btn {
+  background: linear-gradient(to right, #196bca, #6433e0);
+  background-color: #196bca;
+  color: #fff;
+  font-family: Trebuchet MS;
+  font-size: 1rem;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  padding: 8px 19px;
+  border: 0px solid #000;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: inset 4px 7px 14px 2px
+    rgba(41.490710439627236, 198.8140869140625, 10.998129455803424, 0.5);
+}
+
+.great-btn:hover {
+  background: linear-gradient(to right, #1866c0, #5f30d5);
+  background-color: #1866c0;
+}
+
+.great-btn:active {
+  transform: scale(0.95);
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  #go-top {
+    right: 6rem;
+  }
+  .back-icon {
+    font-size: 1.2rem;
+  }
+
+  .back-btn-container {
+    margin-left: 20%;
+    padding-top: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  #go-top {
+    display: none;
+  }
+
+  .back-icon {
+    font-size: 1.2rem;
+  }
+
+  .back-btn-container {
+    margin-left: 20%;
+    padding-top: 5%;
+  }
+}

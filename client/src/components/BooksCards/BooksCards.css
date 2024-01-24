@@ -1,0 +1,106 @@
+.BooksCards .fan-favorite-container {
+  display: flex;
+  gap: 40px;
+}
+
+.BooksCards .fan-favorite-container img {
+  width: 150px;
+  height: 210px;
+  border-radius: 10px;
+  border: 5px solid #13667a;
+  --mask: radial-gradient(2px at 25% 0, #0000 98%, #000) 50% 2px/8px 51%
+      repeat-x,
+    radial-gradient(2px at 75% 50%, #000 99%, #0000 101%) top/8px 4px repeat-x,
+    radial-gradient(2px at 75% 100%, #0000 98%, #000) calc(50% + 4px)
+      calc(100% - 2px) / 8px 51% repeat-x,
+    radial-gradient(2px at 25% 50%, #000 99%, #0000 101%) calc(50% + 4px) 100%/8px
+      4px repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  transition: all 0.5s;
+}
+
+.BooksCards .fan-favorite-container img:hover {
+  transform: scale(0.92);
+}
+
+.BooksCards .book-of-the-day-container {
+  display: flex;
+}
+
+.BooksCards .book-of-the-day-container img {
+  width: fit-content;
+  height: 300px;
+}
+.BooksCards .book-of-the-day-container .book-of-the-day-right {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.BooksCards .book-of-the-day-container .book-of-the-day-right .author-category {
+  display: flex;
+  gap: 40px;
+}
+
+.BooksCards .book-of-the-day-container .book-of-the-day-right span {
+  color: greenyellow;
+}
+
+.BooksCards .book-of-the-day-container .book-of-the-day-right {
+  letter-spacing: 1.3px;
+  line-height: 1.7;
+}
+
+.BooksCards .more-info {
+  width: fit-content;
+  padding: 5px 30px;
+  margin-left: 80%;
+  font-size: 1.1rem;
+  margin-top: 25px;
+}
+
+.BooksCards .big-book img {
+  border-radius: 20px;
+  border: 5px solid gray;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .BooksCards .more-info {
+    margin-left: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .BooksCards .fan-favorite-container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .BooksCards .fan-favorite-container img {
+    width: 130px;
+    height: 210px;
+  }
+
+  .BooksCards .book-of-the-day-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 0;
+  }
+
+  .BooksCards .book-of-the-day-container img {
+    width: fit-content;
+    margin-left: 10%;
+  }
+  .BooksCards .book-of-the-day-container .book-of-the-day-right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    width: 30ch;
+    gap: 20px;
+  }
+
+  .BooksCards .more-info {
+    margin-left: 30%;
+  }
+}

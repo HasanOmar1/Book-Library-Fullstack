@@ -1,0 +1,31 @@
+.Footer {
+  min-height: 30vh;
+  width: 100%;
+  background-color: #0a0a08eb;
+  color: rgba(255, 255, 255, 0.508);
+}
+
+.Footer .footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
+.Footer ul {
+  color: rgba(0, 255, 123, 0.459);
+}
+
+.Footer .contact {
+  display: flex;
+  gap: 10px;
+}
+
+.Footer .icon {
+  color: brown;
+}
+
+.Footer .icon:hover {
+  color: yellow;
+}

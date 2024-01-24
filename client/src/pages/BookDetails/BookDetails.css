@@ -1,0 +1,332 @@
+.BookDetails {
+  min-height: 100vh;
+  min-width: 90vw;
+  background-color: #333;
+  color: #fff;
+}
+
+.BookDetails .info-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e2525;
+  padding: 30px 0;
+}
+
+.BookDetails .info-container img {
+  height: 300px;
+  width: 250px;
+  --mask: radial-gradient(2px at 25% 0, #0000 98%, #000) 50% 2px/8px 51%
+      repeat-x,
+    radial-gradient(2px at 75% 50%, #000 99%, #0000 101%) top/8px 4px repeat-x,
+    radial-gradient(2px at 75% 100%, #0000 98%, #000) calc(50% + 4px)
+      calc(100% - 2px) / 8px 51% repeat-x,
+    radial-gradient(2px at 25% 50%, #000 99%, #0000 101%) calc(50% + 4px) 100%/8px
+      4px repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  border: 5px solid #9b8325;
+  border-radius: 20px;
+}
+
+.BookDetails .more-info-container {
+  padding-left: 30px;
+  letter-spacing: 1.6px;
+}
+
+.BookDetails .more-info-container h4 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  color: #02b9c2;
+}
+
+.BookDetails .important-info {
+  padding-left: 5px;
+  color: greenyellow;
+}
+
+.BookDetails .mid-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.BookDetails .row-info {
+  padding-top: 30px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.BookDetails .divider {
+  border: 2px solid rgb(57, 224, 121);
+  height: 60px;
+  width: 1px;
+}
+
+.BookDetails .small-p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.BookDetails .small-p h5 {
+  font-size: 1.1rem;
+  color: rgb(199, 225, 205);
+  padding: 0 15px;
+}
+
+.BookDetails .small-p p {
+  font-size: 0.8rem;
+  color: rgb(216, 174, 119);
+  padding: 0 15px;
+}
+
+.BookDetails .description {
+  letter-spacing: 1.2px;
+  margin-top: 40px;
+  width: 90ch;
+  margin-left: 32%;
+  display: flex;
+  line-height: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.BookDetails .description h3 {
+  padding-bottom: 3px;
+  border-bottom: 3px solid #00adb5;
+}
+
+.BookDetails .description p {
+  padding-top: 10px;
+}
+
+.BookDetails .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.BookDetails .rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.BookDetails .back-icon {
+  font-size: 1.2rem;
+}
+
+.BookDetails .back-btn-container {
+  margin-left: 20%;
+  padding-top: 1%;
+}
+
+.BookDetails .back-btn {
+  width: fit-content;
+}
+
+.BookDetails .comments-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 60vh;
+  margin-top: 50px;
+}
+
+.BookDetails .submit-comment {
+  width: 600px;
+  height: 150px;
+  background-color: #1e2525;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BookDetails .comment-container {
+  height: 50px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.BookDetails .submit-comment button {
+  border: none;
+  padding: 10px 20px;
+  height: 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #02b9c2;
+  background-color: rgba(90, 90, 106, 0.434);
+  font-size: 1.2rem;
+}
+.BookDetails .comments-section h4 {
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+  color: rgb(168, 212, 102);
+}
+
+.BookDetails .submit-comment input {
+  height: 100%;
+  width: 100%;
+  padding: 0px 20px;
+  font-size: 1.2rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+}
+
+.BookDetails .submit-comment input:focus {
+  outline: none;
+}
+
+.BookDetails .read-comments-container {
+  width: 100%;
+  min-height: 60vh;
+  background-color: rgb(39, 43, 46);
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.BookDetails .read-comment p {
+  letter-spacing: 1.3px;
+}
+
+.BookDetails .read-comment-box {
+  margin-top: 50px;
+  min-height: 0vh;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 90vw;
+  border-radius: 20px;
+}
+
+.BookDetails .read-comments-container .read-comment {
+  border: 1px solid rgb(130, 117, 117);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 25%;
+  border-radius: 20px;
+  background-color: #2c3333;
+  position: relative;
+  width: 50%;
+}
+
+.BookDetails .read-comments-container .read-comment h5 {
+  color: rgb(2, 170, 114);
+  letter-spacing: 1.62px;
+}
+
+.BookDetails .remove-comment {
+  color: rgb(255, 255, 255);
+  background-color: rgba(209, 2, 2, 0.819);
+  padding: 3px 10px;
+  border-radius: 10px;
+  position: absolute;
+  right: 5%;
+  bottom: 0%;
+  cursor: pointer;
+}
+
+.BookDetails .username {
+  color: yellowgreen;
+}
+
+.BookDetails .remove-comment:hover {
+  color: black;
+}
+
+.BookDetails .read-comment .comment {
+  width: 40ch;
+  overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .BookDetails .more-info-container h4 {
+    font-size: 0.9rem;
+  }
+
+  .BookDetails .mid-info h5 {
+    font-size: 0.9rem;
+  }
+
+  .BookDetails .description {
+    margin-left: 30%;
+    font-size: 1rem;
+    width: 80ch;
+  }
+}
+
+@media (max-width: 600px) {
+  .BookDetails .info-container img {
+    display: none;
+  }
+  .BookDetails .more-info-container {
+    margin-left: -80px;
+  }
+  .BookDetails .more-info-container h4 {
+    font-size: 0.9rem;
+  }
+
+  .BookDetails .mid-info h5 {
+    font-size: 0.9rem;
+  }
+
+  .BookDetails .small-p {
+    font-size: 0.7rem;
+  }
+
+  .BookDetails .small-p h5 {
+    font-size: 0.7rem;
+    width: 10ch;
+  }
+
+  .BookDetails .description {
+    width: 50ch;
+    margin-left: 10%;
+    font-size: 0.8rem;
+  }
+
+  .BookDetails .back-btn-container {
+    padding-top: 5%;
+  }
+
+  .BookDetails .submit-comment {
+    width: fit-content;
+    background-color: transparent;
+  }
+
+  .BookDetails .read-comment p {
+    font-size: 1.2rem;
+  }
+  .BookDetails .read-comment .comment {
+    width: 20ch;
+    overflow-wrap: break-word;
+  }
+
+  .BookDetails .read-comments-container .read-comment {
+    width: 300px;
+    margin-left: 40px;
+  }
+
+  .BookDetails .remove-comment {
+    padding: 3px 10px;
+    font-size: 5px;
+  }
+}

@@ -1,0 +1,130 @@
+.LibraryBooks {
+  padding-bottom: 30px;
+}
+
+.LibraryBooks .library-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.LibraryBooks .library-book-container {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(60, 55, 55, 0.704);
+  width: 27vw;
+  height: 40vh;
+  padding: 20px;
+}
+
+.LibraryBooks .library-book-container img {
+  width: 180px;
+  height: 250px;
+}
+
+.LibraryBooks .books-more-info {
+  letter-spacing: 1.3px;
+  line-height: 1.7;
+  margin-left: -20px;
+}
+
+.LibraryBooks .category {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.LibraryBooks .span-title {
+  color: greenyellow;
+}
+
+.LibraryBooks .img-and-button {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.LibraryBooks .img-and-button .btns {
+  display: flex;
+  gap: 20px;
+  width: 210px;
+}
+
+.LibraryBooks .section {
+  color: rgb(5, 200, 203);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(90, 126, 7);
+  padding: 7px;
+  font-size: 1.2rem;
+  width: 60vw;
+}
+
+.LibraryBooks .section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.LibraryBooks .book-title {
+  letter-spacing: 1.5px;
+  color: rgb(3, 195, 195);
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .LibraryBooks .library-book-container {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .LibraryBooks .library-book-container {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .LibraryBooks .books-more-info {
+    margin-left: -5px;
+  }
+
+  .LibraryBooks .span-title {
+    color: greenyellow;
+  }
+
+  .LibraryBooks .img-and-button {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .LibraryBooks .img-and-button .btns {
+    display: flex;
+    gap: 20px;
+    width: 210px;
+  }
+
+  .LibraryBooks .section {
+    color: rgb(5, 200, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(90, 126, 7);
+    padding: 7px;
+    font-size: 1.2rem;
+    width: 60vw;
+  }
+
+  .LibraryBooks .section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+}

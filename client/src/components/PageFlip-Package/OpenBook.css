@@ -1,0 +1,172 @@
+.read-book {
+  padding: 20px 450px;
+}
+.read-book .album-web {
+  text-align: center;
+  color: black;
+  letter-spacing: 2px;
+  line-height: 1.7;
+  overflow: hidden;
+  background-image: url("https://media.istockphoto.com/id/583726578/photo/wood-desk-plank-to-use-as-background-or-texture.jpg?s=612x612&w=0&k=20&c=nZuqX58HAgvD5UkumW_z0xfjeKu-hWncgQbstb4k35A=");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.read-book .page {
+  box-shadow: 0 1.5em 3em -1em rgb(70, 69, 69);
+  background-color: rgb(212, 209, 209);
+}
+
+.read-book .cover {
+  background-color: #e3d0b5;
+  box-shadow: 0 1.5em 3em -1em rgb(70, 69, 69);
+}
+
+.read-book .page-header {
+  padding-top: 10px;
+}
+
+.read-book .page-number {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+}
+
+.read-book .info {
+  color: rgb(21, 11, 201);
+}
+
+.read-book .cover-title {
+  padding-top: 30%;
+  line-height: 2;
+}
+
+.read-book .btns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 30px;
+}
+
+.read-book h4,
+.read-book h5,
+.read-book p {
+  padding: 0 30px;
+}
+
+.read-book img {
+  width: 100%;
+  height: 71vh;
+}
+
+.read-book .goto-input {
+  padding: 3px 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 36px;
+  border: none;
+}
+
+.read-book .goto-input:focus {
+  outline: none;
+}
+
+.read-book .goto-button {
+  margin-left: -3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .read-book {
+    padding: 0px;
+    padding-top: 15px;
+    padding-left: 25%;
+  }
+
+  .read-book .page-header {
+    padding-top: 15px;
+  }
+
+  .read-book .cover-title {
+    padding-top: 50%;
+  }
+
+  .read-book h4,
+  .read-book h5,
+  .read-book p {
+    font-size: 0.8rem;
+  }
+
+  .read-book .btns-container {
+    margin-left: -20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .read-book {
+    padding: 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .read-book .page-header {
+    padding-top: 15px;
+  }
+
+  .read-book .page-number {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+  }
+
+  .read-book .cover-title {
+    padding-top: 30%;
+  }
+
+  .read-book .btns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 37px;
+    margin-top: 5px;
+  }
+
+  .read-book .btns-container button {
+    padding: 5px;
+    margin: 0;
+    font-size: 0.6rem;
+  }
+
+  .read-book h4,
+  .read-book h5,
+  .read-book p {
+    font-size: 0.5rem;
+  }
+
+  .read-book .go-container {
+    position: relative;
+    margin-left: -20px;
+  }
+  .read-book .goto-input {
+    height: 25px;
+    font-size: 0.6rem;
+  }
+
+  .read-book .goto-input:focus {
+    outline: none;
+  }
+
+  .read-book .goto-button {
+    position: absolute;
+  }
+
+  .read-book .end-btn {
+    margin-left: 5px;
+  }
+
+  .read-book .double-arrow-icon {
+    font-size: 0.8rem;
+  }
+}

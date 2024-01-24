@@ -1,0 +1,191 @@
+.Home {
+  min-height: 200vh;
+  background-color: #333;
+  color: white;
+  padding-top: 50px;
+  padding-left: 16%;
+  padding-bottom: 100px;
+}
+
+.Home .fav-books {
+  background-image: linear-gradient(
+    to right top,
+    #242522,
+    #252623,
+    #262724,
+    #272825,
+    #282926
+  );
+  width: 70vw;
+  height: 38vh;
+  padding-left: 20px;
+  border-radius: 15px;
+}
+
+.Home .titles {
+  color: rgba(172, 255, 47, 0.644);
+  letter-spacing: 2px;
+  border-bottom: 2px solid #0b6165;
+  display: inline-block;
+}
+
+.Home .logged-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -15vw;
+}
+
+.Home .logged-user span {
+  color: rgba(172, 255, 47, 0.816);
+}
+
+.Home .big-book-container {
+  padding-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.Home .book-of-the-day-container .book-of-the-day {
+  margin-top: 20px;
+  background-color: #494f3e2d;
+  width: 70vw;
+  height: 40vh;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.Home .big-book-container .right-side .same-more-books .books {
+  padding-top: 3vh;
+}
+
+.Home .weekly-featured-container {
+  display: flex;
+  gap: 60px;
+  width: 70vw;
+  height: fit-content;
+  margin: 15px 0;
+  border-radius: 20px;
+}
+
+.Home .weekly-featured-title {
+  padding-top: 40px;
+}
+
+.Home .weekly-featured {
+  width: 100%;
+  height: 100%;
+  background-color: #272825;
+  border-radius: 20px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.Home .weekly-featured p {
+  padding: 20px 0;
+  letter-spacing: 1.5px;
+  color: rgb(4, 195, 170);
+  font-size: 1.1rem;
+  padding-bottom: 0;
+}
+
+.Home .divider {
+  margin-top: 20px;
+  border: 1px solid rgb(251, 255, 0);
+  width: 84%;
+}
+
+.Home .fairy-books-container {
+  margin-top: 20px;
+}
+.Home .fairy-books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262724;
+  width: 72vw;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 20px 30px;
+}
+
+.Home .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  margin-left: -20%;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .Home {
+    padding-left: 7%;
+  }
+
+  .Home .fav-books {
+    width: 86%;
+    height: fit-content;
+    padding-left: 20px;
+    height: 45vh;
+  }
+
+  .Home .titles {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  .Home .book-of-the-day-container .book-of-the-day {
+    width: 80vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Home .weekly-featured-container {
+    width: 80vw;
+  }
+}
+@media (max-width: 600px) {
+  .Home {
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-bottom: 100px;
+  }
+
+  .Home .fav-books {
+    width: 90%;
+    height: fit-content;
+    padding-left: 20px;
+  }
+
+  .Home .titles {
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
+
+  .Home .logged-user {
+    margin-left: 0vw;
+  }
+
+  .Home .book-of-the-day-container .book-of-the-day {
+    width: 85vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Home .weekly-featured-container {
+    gap: 15px;
+    width: 85vw;
+  }
+
+  .Home .weekly-featured p {
+    padding: 20px 0;
+    margin-left: -20px;
+    font-size: 1rem;
+    padding-bottom: 0;
+  }
+}

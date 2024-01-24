@@ -1,0 +1,68 @@
+.Carousel {
+  height: 38vh;
+  margin-left: -20px;
+}
+
+.Carousel .books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 240px;
+  background-color: rgb(60, 57, 57);
+  border-radius: 20px;
+  width: 45vw;
+  height: 26vh;
+  margin-top: 15px;
+}
+
+.Carousel h5 {
+  margin-left: 60px;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  color: rgb(2, 239, 239);
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .Carousel {
+    margin-top: 10px;
+    height: 45vh;
+  }
+
+  .Carousel .books {
+    margin-left: 0%;
+    padding-left: 0%;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 30px;
+    height: 100%;
+  }
+
+  .Carousel h5 {
+    padding-top: 20px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .Carousel {
+    margin-top: 10px;
+    height: 38vh;
+    margin-left: 0px;
+  }
+
+  .Carousel .books {
+    margin-left: 0px;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .Carousel h5 {
+    padding-top: 40px;
+    margin-left: 0;
+  }
+}

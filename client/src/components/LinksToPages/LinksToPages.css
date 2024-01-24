@@ -1,0 +1,49 @@
+.LinksToPages .books-container {
+  padding-top: 20px;
+}
+
+.LinksToPages .books-container h5 {
+  padding-bottom: 10px;
+  color: rgb(5, 188, 188);
+  letter-spacing: 1.6px;
+}
+
+.LinksToPages .books-container .categories {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 45vw;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.LinksToPages .big-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .LinksToPages .big-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .LinksToPages .people-books {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0%;
+  }
+}
+
+@media (max-width: 600px) {
+  .LinksToPages .books-container .categories {
+    gap: 15px;
+    width: 100%;
+    margin-left: -25px;
+  }
+  .LinksToPages .books-container h5 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+}

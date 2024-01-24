@@ -1,0 +1,25 @@
+.ReadBook {
+  background-color: #333;
+  min-width: 90;
+  min-height: 92.2vh;
+}
+
+.ReadBook .back-icon {
+  font-size: 1.2rem;
+}
+
+.ReadBook .back-btn-container {
+  margin-left: 20%;
+  padding-top: 1%;
+}
+
+.ReadBook .back-btn {
+  width: fit-content;
+}
+
+@media (max-width: 600px) {
+  .ReadBook .back-btn-container {
+    margin-left: 20%;
+    padding-top: 5%;
+  }
+}

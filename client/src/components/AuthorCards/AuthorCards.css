@@ -1,0 +1,87 @@
+.AuthorCards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.AuthorCards .author-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 35vw;
+  height: 200px;
+  background-color: #373835;
+  border-radius: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.AuthorCards .author-card .info-container {
+  display: flex;
+  letter-spacing: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 15px;
+}
+
+.AuthorCards .author-card .info-container img {
+  border: 3px solid gray;
+  border-radius: 50%;
+  padding-top: 10px;
+  width: 200px;
+  height: 150px;
+  background-color: #212220;
+}
+
+.AuthorCards .author-card .info-container h4 {
+  border-bottom: 2px solid rgba(0, 217, 255, 0.309);
+  padding-bottom: 3px;
+}
+
+.AuthorCards .author-card:hover {
+  transform: scale(0.9);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .AuthorCards .author-card {
+    width: 40vw;
+    height: 250px;
+  }
+
+  .AuthorCards .author-card .info-container {
+    gap: 20px;
+    padding-top: 0px;
+  }
+
+  .AuthorCards .author-card .info-container h4 {
+    padding-bottom: 3px;
+    font-size: 1rem;
+  }
+  .AuthorCards .author-card .info-container img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .AuthorCards .author-card {
+    width: 85vw;
+    height: 250px;
+  }
+
+  .AuthorCards .author-card .info-container {
+    gap: 20px;
+    padding-top: 0px;
+  }
+
+  .AuthorCards .author-card .info-container h4 {
+    padding-bottom: 3px;
+    font-size: 1rem;
+  }
+  .AuthorCards .author-card .info-container img {
+    width: 150px;
+    height: 150px;
+  }
+}

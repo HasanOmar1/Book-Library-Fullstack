@@ -1,0 +1,132 @@
+.CategoryBooksCards .big-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 80px;
+  width: 80vw;
+  margin-left: 10%;
+  padding-bottom: 30px;
+}
+
+.CategoryBooksCards .category-name {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.CategoryBooksCards .container {
+  display: flex;
+  width: 600px;
+  height: 300px;
+  padding: 20px;
+  background-color: #1e2525;
+  border-radius: 20px;
+}
+
+.CategoryBooksCards .container img {
+  width: 150px;
+  height: 250px;
+  border-radius: 10px;
+  border: 4px solid rgb(144, 44, 61);
+  transition: all 1s;
+}
+
+.CategoryBooksCards .container img:hover {
+  transform: scale(1.05);
+}
+
+.CategoryBooksCards .container .book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px;
+}
+
+.CategoryBooksCards .container .book-info #title {
+  color: greenyellow;
+  letter-spacing: 1.5px;
+  width: fit-content;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgb(138, 98, 24);
+  cursor: pointer;
+}
+
+.CategoryBooksCards .container .book-info #title:hover {
+  color: rgb(214, 79, 79);
+  border-bottom: 1px solid rgb(32, 105, 105);
+}
+
+.CategoryBooksCards .written-by {
+  color: rgb(0, 156, 218);
+  padding-left: 5px;
+  letter-spacing: 1.1px;
+}
+
+.CategoryBooksCards .pages {
+  letter-spacing: 1.1px;
+  border-left: 1px solid rgb(42, 165, 69);
+  border-right: 1px solid rgb(42, 165, 69);
+  padding: 0 5px;
+}
+
+.CategoryBooksCards .container .book-info .pages-rating {
+  display: flex;
+  gap: 20px;
+}
+
+.CategoryBooksCards .rating {
+  margin-top: -3px;
+}
+
+.CategoryBooksCards .description {
+  color: rgb(137, 131, 131);
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+}
+.CategoryBooksCards .middle {
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .CategoryBooksCards .container {
+    width: 500px;
+  }
+
+  .CategoryBooksCards .desc-container {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .CategoryBooksCards .big-container {
+    margin-left: 1%;
+  }
+
+  .CategoryBooksCards .container {
+    width: 400px;
+  }
+
+  .CategoryBooksCards .container .book-info {
+    padding-left: 20px;
+  }
+
+  .CategoryBooksCards .container .book-info #title {
+    font-size: 0.9rem;
+  }
+
+  .CategoryBooksCards h6 {
+    font-size: 0.8rem;
+  }
+
+  .CategoryBooksCards .pages {
+    font-size: 0.7rem;
+  }
+
+  .CategoryBooksCards .description {
+    font-size: 0.6rem;
+  }
+
+  .CategoryBooksCards .desc-container {
+    overflow: hidden;
+  }
+}

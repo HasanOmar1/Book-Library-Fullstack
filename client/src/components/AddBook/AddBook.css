@@ -1,0 +1,92 @@
+.AddBook .form-container {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddBook .form-container form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border: 3px solid rgb(111, 108, 116);
+  background-color: rgba(32, 36, 32, 0.66);
+  border-radius: 20px;
+  width: 40vw;
+  height: 70vh;
+}
+
+.AddBook .form-container form input,
+.AddBook .form-container form textarea {
+  padding: 10px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.AddBook .form-container form textarea {
+  width: fit-content;
+}
+
+.AddBook .form-container form input:focus,
+.AddBook .form-container form textarea:focus {
+  outline: 1px solid green;
+}
+
+.AddBook .form-container form button {
+  padding: 10px 50px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  transition: all 0.3s;
+}
+
+.AddBook .form-container form button:hover {
+  background-color: rgb(16, 83, 119);
+}
+
+.AddBook .info {
+  color: greenyellow;
+  letter-spacing: 1.5px;
+}
+
+.AddBook .extra-info {
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .AddBook .form-container form {
+    width: 70%;
+  }
+
+  .AddBook .form-container form input {
+    width: 500px;
+  }
+  .AddBook .form-container form textarea {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .AddBook .form-container form {
+    width: 90vw;
+  }
+
+  .AddBook .form-container form textarea {
+    width: 300px;
+  }
+
+  .AddBook .extra-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    width: 35ch;
+  }
+}
