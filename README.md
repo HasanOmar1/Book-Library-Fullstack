@@ -120,7 +120,7 @@ I have created a responsive book library using React for the frontend and MongoD
   ![user](./server/assets//user.png)
 
 - Books
-  ![books](/assets/books.png)
+  ![books](./server/assets/books.png)
 
 - FairyTales
   ![fairy tales](./server/assets/fairy-tales.png)
