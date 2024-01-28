@@ -61,18 +61,18 @@ of a book and added it to the pages just to fill them.
 
 ## Preview
 
-![home-page-1](./src/assets/home-1.png)
-![home-page-2](./src/assets/home-2.png)
-![home-page-3](./src/assets/home-3.png)
-![home-page-4](./src/assets/home-4.png)
-![sign-up](./src/assets/Signup.png)
-![search-page](./src/assets/search-page.png)
-![add-book](./src/assets/add-book.png)
-![library](./src/assets/library.png)
-![my-book](./src/assets/my-book.png)
-![about](./src/assets/about.png)
-![book-page](./src/assets/book-page.png)
-![read-book](./src/assets/read-book.png)
+![home-page-1](./client/src/assets/home-1.png)
+![home-page-2](./client/src/assets/home-2.png)
+![home-page-3](./client/src/assets/home-3.png)
+![home-page-4](./client/src/assets/home-4.png)
+![sign-up](./client/src/assets/Signup.png)
+![search-page](./client/src/assets/search-page.png)
+![add-book](./client/src/assets/add-book.png)
+![library](./client/src/assets/library.png)
+![my-book](./client/src/assets/my-book.png)
+![about](./client/src/assets/about.png)
+![book-page](./client/src/assets/book-page.png)
+![read-book](./client/src/assets/read-book.png)
 
 ---
 
