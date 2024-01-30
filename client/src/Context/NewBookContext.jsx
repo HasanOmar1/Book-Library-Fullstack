@@ -24,9 +24,11 @@ export default function NewBookProvider({ children }) {
 
   async function removeMyBook(bookId) {
     try {
-      const response = await axios.delete(`/fairy/${bookId}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const config = {
+        headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
+      };
+      const response = await axios.delete(`/fairy/${bookId}`, config);
+
       console.log(response.data);
       if (response.data.fairyBooks) {
         const userJSON = JSON.stringify(response.data);
@@ -36,7 +38,8 @@ export default function NewBookProvider({ children }) {
       }
       getFairyBooks();
     } catch (error) {
-      console.log(error.response.data);
+      console.log(token);
+      console.log(error.response.data.message);
     }
   }
 
