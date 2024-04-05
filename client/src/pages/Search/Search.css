@@ -64,3 +64,10 @@
     margin-left: 35%;
   }
 }
+
+@media (max-width: 400px) {
+  .Search .search-input-container {
+    width: 340px;
+    margin-left: 5%;
+  }
+}

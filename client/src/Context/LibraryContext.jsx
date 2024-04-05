@@ -21,7 +21,6 @@ export default function LibraryProvider({ children }) {
           {},
           config
         );
-        console.log(response.data);
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
         setCurrentUser(response.data);
@@ -48,12 +47,10 @@ export default function LibraryProvider({ children }) {
           {},
           config
         );
-        console.log(response.data);
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
         setCurrentUser(response.data);
       } else {
-        console.log("Login first");
         setBooksErrorMsg("Please login first");
       }
     } catch (error) {
@@ -76,7 +73,6 @@ export default function LibraryProvider({ children }) {
           {},
           config
         );
-        console.log(response.data);
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
         setCurrentUser(response.data);
@@ -103,12 +99,10 @@ export default function LibraryProvider({ children }) {
           {},
           config
         );
-        console.log(response.data);
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
         setCurrentUser(response.data);
       } else {
-        console.log("Login first");
         setBooksErrorMsg("Please login first");
       }
     } catch (error) {

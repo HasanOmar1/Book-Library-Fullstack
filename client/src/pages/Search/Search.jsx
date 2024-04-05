@@ -30,7 +30,6 @@ export default function Search() {
   }, [searchValue]);
 
   const allBooks = booksByName?.concat(searchForFairyBooks);
-  // console.log(allBooks);
 
   return (
     <div className="Search" id="home">

@@ -9,7 +9,6 @@ import { useFairyContext } from "../../../Context/FairyBooksContext";
 export default function FairyLibraryBooks({ library }) {
   const { removeFairyBookFromLibrary } = useLibraryContext();
   const { currentUser } = useNewUsersContext();
-  // console.log(currentUser?.fairyBooks);
   const { getFairyBooks } = useFairyContext();
 
   useEffect(() => {

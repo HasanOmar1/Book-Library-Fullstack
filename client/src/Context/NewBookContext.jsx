@@ -16,7 +16,6 @@ export default function NewBookProvider({ children }) {
       const response = await axios.post("/fairy", book, {
         headers: { authorization: `Bearer ${token}` },
       });
-      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -29,7 +28,6 @@ export default function NewBookProvider({ children }) {
       };
       const response = await axios.delete(`/fairy/${bookId}`, config);
 
-      console.log(response.data);
       if (response.data.fairyBooks) {
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
@@ -38,7 +36,6 @@ export default function NewBookProvider({ children }) {
       }
       getFairyBooks();
     } catch (error) {
-      console.log(token);
       console.log(error.response.data.message);
     }
   }

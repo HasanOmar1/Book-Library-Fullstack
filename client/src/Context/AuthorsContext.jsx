@@ -12,7 +12,6 @@ export default function AuthorsProvider({ children }) {
   async function getRowlingBooks() {
     try {
       const response = await axios.get("/books/author/j. k. rowling");
-      console.log(response.data);
       setRowlingBooks(response.data);
     } catch (error) {
       console.log(error.response.data.message);
@@ -22,7 +21,6 @@ export default function AuthorsProvider({ children }) {
   async function getGeorgeMartinBooks() {
     try {
       const response = await axios.get("/books/author/george r. r. martin");
-      console.log(response.data);
       setGeorgeMartinBooks(response.data);
     } catch (error) {
       console.log(error.response.data.message);
@@ -32,7 +30,6 @@ export default function AuthorsProvider({ children }) {
   async function getStanLeeBooks() {
     try {
       const response = await axios.get("/books/author/Stan lee");
-      console.log(response.data);
       setStanLeeBooks(response.data);
     } catch (error) {
       console.log(error.response.data.message);
@@ -42,7 +39,6 @@ export default function AuthorsProvider({ children }) {
   async function getStephenKingBooks() {
     try {
       const response = await axios.get("/books/author/Stephen king");
-      console.log(response.data);
       setStephenKingBooks(response.data);
     } catch (error) {
       console.log(error.response.data.message);

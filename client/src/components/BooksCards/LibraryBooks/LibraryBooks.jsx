@@ -8,7 +8,6 @@ import { useNewUsersContext } from "../../../Context/NewUsersContext";
 export default function LibraryBooks({ library }) {
   const { removeBookFromLibrary } = useLibraryContext();
   const { currentUser } = useNewUsersContext();
-  // console.log(currentUser?.books);
 
   return (
     <div className="LibraryBooks">

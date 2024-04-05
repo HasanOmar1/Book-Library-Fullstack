@@ -80,14 +80,16 @@
 
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .LibraryBooks .library-book-container {
-    width: 40vw;
+    max-width: 100vw;
+    width: 85vw;
   }
 }
 
 @media (max-width: 767px) {
   .LibraryBooks .library-book-container {
-    width: fit-content;
     height: fit-content;
+    max-width: 100vw;
+    width: 90vw;
   }
 
   .LibraryBooks .books-more-info {
@@ -126,5 +128,11 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .LibraryBooks .library-book-container {
+    width: 100%;
   }
 }

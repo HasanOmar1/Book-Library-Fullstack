@@ -26,8 +26,6 @@ export default function BookDetails() {
 
   const { currentUser } = useNewUsersContext();
 
-  // console.log(currentUser);
-  // console.log(state);
   const errorRef = useRef();
 
   const loggedUser = localStorage.getItem("user");
@@ -230,7 +228,6 @@ export default function BookDetails() {
 
           <div className="read-comment-box">
             {comments?.map((data) => {
-              // console.log(data);
               return (
                 <div className="read-comment" key={data?._id}>
                   <p

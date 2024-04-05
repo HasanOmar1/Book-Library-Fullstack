@@ -24,7 +24,6 @@ export default function NewUsersProvider({ children }) {
   async function usersAPI() {
     try {
       const response = await axios.get("/users");
-      // console.log(response.data);
       setUsers(response.data);
     } catch (error) {
       console.log(error.response.data.message);
@@ -35,7 +34,6 @@ export default function NewUsersProvider({ children }) {
   async function userLogin(user) {
     try {
       const response = await axios.post("/users/login", user);
-      console.log(response.data);
       setCurrentUser(response.data);
       const userJSON = JSON.stringify(response.data);
       localStorage.setItem("user", userJSON);
@@ -51,7 +49,6 @@ export default function NewUsersProvider({ children }) {
   async function createUser(user) {
     try {
       const response = await axios.post("/users/create", user);
-      // console.log(response.data);
       navigate("/login");
     } catch (error) {
       console.log(error.response.data.message);

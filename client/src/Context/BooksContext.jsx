@@ -28,7 +28,6 @@ export default function BooksProvider({ children }) {
   async function fetchBooks() {
     try {
       const response = await axios.get("/books");
-      // console.log(response.data);
       setBooks(response?.data);
     } catch (error) {
       console.log(error);
@@ -38,11 +37,9 @@ export default function BooksProvider({ children }) {
   async function getBooksByName(bookName) {
     try {
       const response = await axios.get(`/books/search/${bookName}`);
-      // console.log(response.data);
 
       setBooksByName(response.data);
     } catch (error) {
-      // console.log(error.response.data.message);
       setErrorMsg(error.response.data.message);
       setBooksByName([]);
     }
@@ -52,7 +49,6 @@ export default function BooksProvider({ children }) {
   async function getHowToBooks() {
     try {
       const response = await axios.get(`/books/search/how to`);
-      console.log(response.data);
       setHowToBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -71,7 +67,6 @@ export default function BooksProvider({ children }) {
   async function getComicsBooks() {
     try {
       const response = await axios.get(`/books/category/comics`);
-      console.log(response.data);
       setComicsBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -81,7 +76,6 @@ export default function BooksProvider({ children }) {
   async function getArtBooks() {
     try {
       const response = await axios.get(`/books/category/art`);
-      console.log(response.data);
       setArtBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -91,7 +85,6 @@ export default function BooksProvider({ children }) {
   async function getCriticismBooks() {
     try {
       const response = await axios.get(`/books/category/criticism`);
-      console.log(response.data);
       setCriticismBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -101,7 +94,6 @@ export default function BooksProvider({ children }) {
   async function getHowToBooks() {
     try {
       const response = await axios.get(`/books/search/how to`);
-      console.log(response.data);
       setHowToBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -111,7 +103,6 @@ export default function BooksProvider({ children }) {
   async function getCrimeBooks() {
     try {
       const response = await axios.get(`/books/search/criminal`);
-      console.log(response.data);
       setCrimeBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -121,7 +112,6 @@ export default function BooksProvider({ children }) {
   async function getCarsBooks() {
     try {
       const response = await axios.get(`/books/search/cars`);
-      console.log(response.data);
       setCarsBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -131,7 +121,6 @@ export default function BooksProvider({ children }) {
   async function getHistoryBooks() {
     try {
       const response = await axios.get(`/books/search/history`);
-      console.log(response.data);
       setHistoryBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -141,7 +130,6 @@ export default function BooksProvider({ children }) {
   async function getAdventureBooks() {
     try {
       const response = await axios.get(`/books/search/adventure`);
-      console.log(response.data);
       setAdventureBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -151,7 +139,6 @@ export default function BooksProvider({ children }) {
   async function getRomanceBooks() {
     try {
       const response = await axios.get(`/books/search/romance`);
-      console.log(response.data);
       setRomanceBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -161,7 +148,6 @@ export default function BooksProvider({ children }) {
   async function getCookingBooks() {
     try {
       const response = await axios.get(`/books/category/cooking`);
-      console.log(response.data);
       setCookingBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -171,7 +157,6 @@ export default function BooksProvider({ children }) {
   async function getHorrorBooks() {
     try {
       const response = await axios.get(`/books/search/horror`);
-      console.log(response.data);
       setHorrorBooks(response.data);
     } catch (error) {
       console.log(error);

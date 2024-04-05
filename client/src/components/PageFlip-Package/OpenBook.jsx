@@ -35,8 +35,6 @@ function OpenBook() {
   const [currentPageNum, setCurrentPageNum] = useState(1);
   const [goToPageValue, setGoToPageValue] = useState(0);
 
-  // console.log(state);
-
   function handlePageChange(pageNum) {
     setCurrentPageNum(pageNum);
   }

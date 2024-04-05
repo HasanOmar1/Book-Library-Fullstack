@@ -14,7 +14,6 @@ export default function CommentsContextProvider({ children }) {
   async function fetchComments() {
     try {
       const response = await axios.get("/comments");
-      // console.log(response.data);
     } catch (error) {
       console.log(error.response.data.message);
     }
@@ -26,7 +25,6 @@ export default function CommentsContextProvider({ children }) {
         headers: { authorization: `Bearer ${token}` },
       };
       const response = await axios.post("/comments/create", comment, config);
-      // console.log(response.data.comments);
       setComments(response.data.comments);
     } catch (error) {
       console.log(error.response.data.message);
@@ -36,20 +34,14 @@ export default function CommentsContextProvider({ children }) {
   async function getBooksByName(bookId) {
     try {
       const response = await axios.get(`/books/search/${bookId}`);
-      // console.log(response.data[0]?.comments);
       setComments(response.data[0]?.comments);
-    } catch (error) {
-      // console.log(error.response.data.message);
-    }
+    } catch (error) {}
   }
   async function getFairyBooksByName(bookId) {
     try {
       const response = await axios.get(`/fairy/title/${bookId}`);
-      // console.log(response.data[0]?.comments);
       setComments(response.data[0]?.comments);
-    } catch (error) {
-      // console.log(error.response.data.message);
-    }
+    } catch (error) {}
   }
 
   async function removeComment(bookId) {
@@ -59,7 +51,6 @@ export default function CommentsContextProvider({ children }) {
         headers: { authorization: `Bearer ${token}` },
       });
 
-      // console.log(response.data.comments);
       setComments(response.data.comments);
     } catch (error) {
       console.log(error.response.data.message);
