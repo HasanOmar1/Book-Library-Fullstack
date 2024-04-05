@@ -6,7 +6,6 @@ import { useNewUsersContext } from "../../Context/NewUsersContext";
 
 export default function MyLibrary() {
   const { currentUser } = useNewUsersContext();
-  console.log(currentUser);
 
   return (
     <main className="MyLibrary">

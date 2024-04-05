@@ -65,7 +65,11 @@
   border-radius: 20px;
   border: 5px solid gray;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .BooksCards .book-of-the-day-container .book-of-the-day-right a {
+    margin-left: 0;
+  }
+}
 @media (max-width: 767px) {
   .BooksCards .fan-favorite-container {
     padding-top: 20px;
@@ -84,7 +88,6 @@
 
   .BooksCards .book-of-the-day-container img {
     width: fit-content;
-    margin-left: 10%;
   }
   .BooksCards .book-of-the-day-container .book-of-the-day-right {
     display: flex;

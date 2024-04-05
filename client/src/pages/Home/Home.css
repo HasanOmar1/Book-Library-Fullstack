@@ -61,7 +61,6 @@
   margin-top: 20px;
   background-color: #494f3e2d;
   width: 70vw;
-  height: 40vh;
   padding: 20px;
   border-radius: 10px;
 }
@@ -147,11 +146,12 @@
   }
 
   .Home .book-of-the-day-container .book-of-the-day {
-    width: 80vw;
+    /* width: 80vw; */
     height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
   }
 
   .Home .weekly-featured-container {

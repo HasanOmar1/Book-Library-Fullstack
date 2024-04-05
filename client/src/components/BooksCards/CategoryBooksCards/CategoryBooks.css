@@ -130,3 +130,12 @@
     overflow: hidden;
   }
 }
+
+@media (max-width: 400px) {
+  .CategoryBooksCards .container {
+    width: 360px;
+  }
+  .CategoryBooksCards .container img {
+    width: 120px;
+  }
+}

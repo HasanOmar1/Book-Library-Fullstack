@@ -58,7 +58,6 @@
 .BookDetails .row-info {
   padding-top: 30px;
   display: flex;
-  gap: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -328,5 +327,16 @@
   .BookDetails .remove-comment {
     padding: 3px 10px;
     font-size: 5px;
+  }
+
+  .BookDetails .description {
+    margin-left: 50px;
+    width: 40ch;
+  }
+}
+
+@media (max-width: 500px) {
+  .BookDetails .submit-comment {
+    width: 300px;
   }
 }

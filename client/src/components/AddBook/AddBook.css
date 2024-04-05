@@ -1,5 +1,5 @@
 .AddBook .form-container {
-  padding-top: 50px;
+  padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +18,7 @@
   border-radius: 20px;
   width: 40vw;
   height: 70vh;
+  padding: 30px 0;
 }
 
 .AddBook .form-container form input,
@@ -29,6 +30,7 @@
   background-color: #333;
   color: white;
   font-size: 1.2rem;
+  resize: none;
 }
 
 .AddBook .form-container form textarea {
@@ -66,13 +68,6 @@
   .AddBook .form-container form {
     width: 70%;
   }
-
-  .AddBook .form-container form input {
-    width: 500px;
-  }
-  .AddBook .form-container form textarea {
-    width: 600px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -88,5 +83,13 @@
     margin-top: 10px;
     font-size: 0.9rem;
     width: 35ch;
+  }
+}
+
+@media (max-width: 400px) {
+  .AddBook .form-container form {
+    width: 90vw;
+    height: fit-content;
+    padding: 30px;
   }
 }

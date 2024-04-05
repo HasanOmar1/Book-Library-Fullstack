@@ -62,7 +62,6 @@ export default function BooksProvider({ children }) {
   async function getFictionBooks() {
     try {
       const response = await axios.get(`/books/category/fiction`);
-      console.log(response.data);
       setFictionBooks(response.data);
     } catch (error) {
       console.log(error);

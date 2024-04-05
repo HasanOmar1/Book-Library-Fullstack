@@ -37,7 +37,21 @@
   .WeeklyFeaturedBooks .weekly-books {
     overflow: auto;
     white-space: nowrap;
-    width: 300px;
+    width: 500px;
     flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 560px) {
+  .WeeklyFeaturedBooks .weekly-books {
+    width: 370px;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .WeeklyFeaturedBooks .weekly-books {
+    width: 300px;
+    padding-left: 20px;
   }
 }
