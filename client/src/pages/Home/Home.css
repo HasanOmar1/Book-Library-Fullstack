@@ -1,10 +1,21 @@
 .Home {
-  min-height: 200vh;
   background-color: #333;
   color: white;
   padding-top: 50px;
-  padding-left: 16%;
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.Home .category-books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .Home .fav-books {
@@ -29,11 +40,11 @@
   display: inline-block;
 }
 
-.Home .logged-user {
+.Home .title-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -15vw;
+  padding-top: 30px;
 }
 
 .Home .logged-user span {
@@ -94,7 +105,7 @@
 .Home .divider {
   margin-top: 20px;
   border: 1px solid rgb(251, 255, 0);
-  width: 84%;
+  width: 100%;
 }
 
 .Home .fairy-books-container {
@@ -147,17 +158,18 @@
     width: 80vw;
   }
 }
-@media (max-width: 600px) {
-  .Home {
-    padding-top: 50px;
-    padding-left: 5%;
-    padding-bottom: 100px;
+@media (max-width: 767px) {
+  .Home .weekly-featured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
   }
-
   .Home .fav-books {
     width: 90%;
     height: fit-content;
     padding-left: 20px;
+    height: 400px;
   }
 
   .Home .titles {
@@ -167,6 +179,24 @@
 
   .Home .logged-user {
     margin-left: 0vw;
+  }
+
+  .Home .logged-user h5 {
+    font-size: 1rem;
+  }
+
+  .Home .book-of-the-day-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Home .fairy-books-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .Home .book-of-the-day-container .book-of-the-day {
@@ -179,13 +209,35 @@
 
   .Home .weekly-featured-container {
     gap: 15px;
-    width: 85vw;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .Home .weekly-featured p {
     padding: 20px 0;
-    margin-left: -20px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding-bottom: 0;
+    letter-spacing: 0;
+  }
+
+  .Home .divider {
+    width: 90%;
+  }
+
+  .Home .fairy-books {
+    justify-content: start;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

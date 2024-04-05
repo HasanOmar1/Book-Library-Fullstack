@@ -15,7 +15,7 @@
   gap: 10vw;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .MyLibrary {
     padding-left: 2%;
     padding-top: 30px;

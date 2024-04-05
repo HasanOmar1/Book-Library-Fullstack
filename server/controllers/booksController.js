@@ -18,6 +18,7 @@ export const getBooks = async (req, res, next) => {
 export const addBook = async (req, res, next) => {
   try {
     const book = await Books.create(req.body);
+    res.status(STATUS_CODE.CREATED);
     res.send(book);
   } catch (error) {
     next(error);

@@ -17,7 +17,7 @@
   width: fit-content;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .ReadBook .back-btn-container {
     margin-left: 20%;
     padding-top: 5%;

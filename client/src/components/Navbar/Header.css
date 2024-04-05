@@ -30,13 +30,7 @@
   margin-left: 30vw;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
-  .Header .move-right {
-    margin-left: 25vw;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .Header {
     font-size: 0.5rem;
   }
@@ -49,5 +43,10 @@
   }
   .Header .search-icon {
     font-size: 0.7rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .Header .move-right {
+    margin-left: 25vw;
   }
 }

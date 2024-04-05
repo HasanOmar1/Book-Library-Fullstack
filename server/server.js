@@ -30,3 +30,5 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log(`Server running on port ${port}`);
   });
 });
+
+export default app;

@@ -107,7 +107,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .login-sign-up .title {
     padding-left: 10%;
     font-size: 1rem;

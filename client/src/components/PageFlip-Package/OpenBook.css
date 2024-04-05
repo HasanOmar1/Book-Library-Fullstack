@@ -104,7 +104,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .read-book {
     padding: 0px;
     padding-top: 10px;

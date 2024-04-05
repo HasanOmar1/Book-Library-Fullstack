@@ -19,18 +19,25 @@
   padding-top: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .WeeklyFeaturedBooks .weekly-books img {
-    margin-left: -20px;
-    width: 100%;
-    height: fit-content;
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .WeeklyFeaturedBooks .weekly-books .category {
     padding-top: 10px;
-    margin-left: -40px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .WeeklyFeaturedBooks .weekly-books {
+    overflow: auto;
+    white-space: nowrap;
+    width: 300px;
+    flex-wrap: nowrap;
   }
 }

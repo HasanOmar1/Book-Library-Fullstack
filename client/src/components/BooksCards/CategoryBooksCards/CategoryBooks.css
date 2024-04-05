@@ -97,7 +97,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .CategoryBooksCards .big-container {
     margin-left: 1%;
   }

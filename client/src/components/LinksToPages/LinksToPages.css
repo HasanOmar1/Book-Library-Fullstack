@@ -1,5 +1,9 @@
 .LinksToPages .books-container {
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .LinksToPages .books-container h5 {
@@ -12,15 +16,17 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  width: 45vw;
   justify-content: center;
   align-items: center;
-  margin-left: 15%;
 }
 
 .LinksToPages .big-container {
   display: flex;
   flex-direction: column;
+}
+
+.LinksToPages .authors {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1440px) {
@@ -36,11 +42,9 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .LinksToPages .books-container .categories {
-    gap: 15px;
-    width: 100%;
-    margin-left: -25px;
+    gap: 23px;
   }
   .LinksToPages .books-container h5 {
     margin-top: 30px;

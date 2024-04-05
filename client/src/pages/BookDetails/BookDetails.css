@@ -273,7 +273,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .BookDetails .info-container img {
     display: none;
   }

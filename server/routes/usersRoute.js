@@ -16,5 +16,6 @@ router.get("/currentUser", getLoggedUser); // gets logged on user [ not using it
 router.post("/create", createUser); // creates an account
 router.post("/login", login); // login to your account
 router.delete("/delete/:id", deleteUser); // deletes user from the database
+router.delete("/delete", deleteUser); // checks if id is provided
 
 export default router;

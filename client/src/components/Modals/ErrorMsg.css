@@ -47,7 +47,7 @@ dialog .book-error-close-dialog {
   color: wheat;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   dialog {
     left: 4%;
   }

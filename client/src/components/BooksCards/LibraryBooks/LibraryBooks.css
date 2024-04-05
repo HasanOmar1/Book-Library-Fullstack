@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .LibraryBooks .library-book-container {
     width: fit-content;
     height: fit-content;

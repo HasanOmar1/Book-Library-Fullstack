@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useBooksData } from "../../Context/BooksContext";
 import "./BooksCards.css";
 import { Link } from "react-router-dom";
 
 export default function BooksCards({ sliceStart, sliceEnd }) {
-  const { books, fetchBooks } = useBooksData();
+  const { books } = useBooksData();
 
   return (
     <div className="BooksCards">

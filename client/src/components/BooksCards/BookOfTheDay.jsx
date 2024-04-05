@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useBooksData } from "../../Context/BooksContext";
 import "./BooksCards.css";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
 export default function BookOfTheDay({ sliceStart, sliceEnd }) {
-  const { books, fetchBooks } = useBooksData();
+  const { books } = useBooksData();
 
   return (
     <div className="BooksCards">
@@ -35,6 +35,7 @@ export default function BookOfTheDay({ sliceStart, sliceEnd }) {
                   </p>
                 </div>
                 <p>{info?.volumeInfo?.description}</p>
+
                 <Link
                   to={`${info?.volumeInfo?.title.slice(0, 6)}`}
                   state={info}

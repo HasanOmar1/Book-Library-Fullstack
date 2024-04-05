@@ -51,12 +51,14 @@
   line-height: 1.7;
 }
 
-.BooksCards .more-info {
+.BooksCards .book-of-the-day-container .book-of-the-day-right a {
   width: fit-content;
-  padding: 5px 30px;
+  margin-top: 40px;
   margin-left: 80%;
+}
+.BooksCards .more-info {
+  padding: 5px 30px;
   font-size: 1.1rem;
-  margin-top: 25px;
 }
 
 .BooksCards .big-book img {
@@ -64,18 +66,10 @@
   border: 5px solid gray;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
-  .BooksCards .more-info {
-    margin-left: 70%;
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .BooksCards .fan-favorite-container {
-    display: flex;
-    gap: 30px;
+    padding-top: 20px;
   }
-
   .BooksCards .fan-favorite-container img {
     width: 130px;
     height: 210px;
@@ -102,5 +96,10 @@
 
   .BooksCards .more-info {
     margin-left: 30%;
+  }
+
+  .BooksCards .book-of-the-day-container .book-of-the-day-right a {
+    margin-top: 0px;
+    margin-left: 20%;
   }
 }
