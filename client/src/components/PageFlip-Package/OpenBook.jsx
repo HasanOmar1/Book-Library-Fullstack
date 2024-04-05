@@ -86,19 +86,14 @@ function OpenBook() {
   const [flipPageHeight, setFlipPageHeight] = useState("");
 
   useEffect(() => {
-    if (window.innerWidth > 1450) {
+    if (window.innerWidth > 1400) {
       setFlipPageWidth("500");
-    } else if (window.innerWidth > 1300 && window.innerWidth < 1440) {
-      setFlipPageWidth("400");
-    } else {
-      setFlipPageWidth("200");
-    }
-
-    if (window.innerWidth > 1450) {
       setFlipPageHeight("650");
     } else if (window.innerWidth > 1300 && window.innerWidth < 1440) {
+      setFlipPageWidth("400");
       setFlipPageHeight("600");
     } else {
+      setFlipPageWidth("200");
       setFlipPageHeight("600");
     }
   }, []);
