@@ -23,6 +23,9 @@ export default function Home() {
 
   return (
     <main className="Home Page">
+      {/* <div className="loader">
+        <HashLoader color="#36d7b7" />
+      </div> */}
       {books ? (
         <>
           {loggedUser && (
