@@ -15,7 +15,7 @@ const authors = [
     to: "Stan-Lee",
   },
   {
-    img: "https://pnglib.nyc3.cdn.digitaloceanspaces.com/uploads/2020/02/stephen-king-wearing-bow-tie_5e3bf84646360.png",
+    img: "https://i.ibb.co/zh77nz7/46-facts-about-stephen-king-1691320535-removebg-preview.png",
     author: "Stephen King",
     to: "Stephen-king",
   },
