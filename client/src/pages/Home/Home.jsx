@@ -51,7 +51,6 @@ export default function Home() {
           <div>( The server is waking up, this might take some time )</div>
 
           <SkeletonComp />
-          <p>TEST</p>
         </>
       )}
     </main>
