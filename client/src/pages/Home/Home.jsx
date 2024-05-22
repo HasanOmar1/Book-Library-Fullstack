@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./Home.css";
 import { useNewUsersContext } from "../../Context/NewUsersContext";
 import { useBooksData } from "../../Context/BooksContext";
@@ -48,6 +48,7 @@ export default function Home() {
           <div className="loader">
             <HashLoader color="#36d7b7" />
           </div>
+          <div>( The server is waking up, this might take some time )</div>
 
           <SkeletonComp />
         </>
