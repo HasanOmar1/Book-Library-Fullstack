@@ -2,6 +2,7 @@ import React, { createContext, useContext } from "react";
 import axios from "../axiosConfig";
 import { useFairyContext } from "./FairyBooksContext";
 import { useNewUsersContext } from "./NewUsersContext";
+import { toast } from "react-toastify";
 
 const NewBookContext = createContext();
 
@@ -16,6 +17,7 @@ export default function NewBookProvider({ children }) {
       const response = await axios.post("/fairy", book, {
         headers: { authorization: `Bearer ${token}` },
       });
+      toast.success("Book added successfully");
     } catch (error) {
       console.log(error);
     }
@@ -34,6 +36,8 @@ export default function NewBookProvider({ children }) {
         setCurrentUser(response.data);
         getFairyBooks();
       }
+      toast.error("Book has been deleted");
+
       getFairyBooks();
     } catch (error) {
       console.log(error.response.data.message);

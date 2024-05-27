@@ -15,6 +15,10 @@
   gap: 10vw;
 }
 
+.MyLibrary .no-books {
+  text-align: center;
+  padding-top: 200px;
+}
 @media (max-width: 767px) {
   .MyLibrary {
     padding-left: 2%;

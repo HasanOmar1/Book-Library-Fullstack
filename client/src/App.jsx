@@ -36,6 +36,7 @@ import NewBookProvider from "./Context/NewBookContext";
 import AddBookPage from "./pages/AddBookPage/AddBookPage";
 import BooksByPeople from "./pages/Categories/BooksByPeople";
 import MyBooks from "./pages/MyBooks/MyBooks";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
                   <NewBookProvider>
                     <Header />
                     <ScrollToTop />
+
                     <Routes>
                       <Route path={"/"} exact element={<Home />} />
                       <Route path={"/sign-up"} element={<SignUp />} />

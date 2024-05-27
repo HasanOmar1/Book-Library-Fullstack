@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useNewUsersContext } from "../../Context/NewUsersContext";
 import SearchIcon from "@mui/icons-material/Search";
 import "./Header.css";
+import { ToastContainer } from "react-toastify";
 
 function Header() {
   const { setCurrentUser } = useNewUsersContext();
@@ -20,6 +21,18 @@ function Header() {
 
   return (
     <nav className="Header">
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand className="brand">

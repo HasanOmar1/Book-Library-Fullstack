@@ -56,6 +56,7 @@ of a book and added it to the pages just to fill them.
 - Material UI
 - Bootstrap
 - React Page Flip
+- React Toastify
 
 ---
 
