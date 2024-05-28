@@ -10,8 +10,8 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 35vw;
-  height: 200px;
+  width: 700px;
+  height: 230px;
   background-color: #373835;
   border-radius: 20px;
   transition: all 0.5s;
@@ -21,7 +21,6 @@
 
 .AuthorCards .author-card .info-container {
   display: flex;
-  letter-spacing: 2px;
   justify-content: center;
   align-items: center;
   gap: 30px;
