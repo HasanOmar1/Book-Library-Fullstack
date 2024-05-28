@@ -248,6 +248,7 @@ export default function BookDetails() {
                 </div>
               );
             })}
+            {comments?.length === 0 && <h5 id="no-comments">No Comments </h5>}
           </div>
         </div>
       </div>

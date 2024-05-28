@@ -90,8 +90,6 @@
 .BookDetails .description {
   letter-spacing: 1.2px;
   margin-top: 40px;
-  width: 90ch;
-  margin-left: 32%;
   display: flex;
   line-height: 2;
   flex-direction: column;
@@ -106,6 +104,7 @@
 
 .BookDetails .description p {
   padding-top: 10px;
+  width: 90ch;
 }
 
 .BookDetails .buttons {
@@ -152,6 +151,10 @@
   align-items: center;
 }
 
+.BookDetails #no-comments {
+  text-align: center;
+  width: 100%;
+}
 .BookDetails .comment-container {
   height: 50px;
   border-radius: 20px;
@@ -254,7 +257,7 @@
   overflow-wrap: break-word;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
   .BookDetails .more-info-container h4 {
     font-size: 0.9rem;
   }
@@ -263,9 +266,7 @@
     font-size: 0.9rem;
   }
 
-  .BookDetails .description {
-    margin-left: 30%;
-    font-size: 1rem;
+  .BookDetails .description p {
     width: 80ch;
   }
 }
@@ -294,10 +295,8 @@
     width: 10ch;
   }
 
-  .BookDetails .description {
-    width: 50ch;
-    margin-left: 10%;
-    font-size: 0.8rem;
+  .BookDetails .description p {
+    width: 60ch;
   }
 
   .BookDetails .back-btn-container {
@@ -327,14 +326,29 @@
     font-size: 5px;
   }
 
-  .BookDetails .description {
-    margin-left: 50px;
-    width: 40ch;
+  .BookDetails .read-comment-box {
+    justify-content: center;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .BookDetails .submit-comment {
     width: 300px;
+  }
+
+  .BookDetails .description p {
+    width: 60ch;
+    font-size: 0.7rem;
+  }
+
+  .BookDetails .read-comments-container .read-comment p,
+  .BookDetails .read-comments-container .read-comment h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .BookDetails .description p {
+    width: 50ch;
   }
 }
