@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./BookDetails.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
@@ -205,7 +205,7 @@ export default function BookDetails() {
       <div className="read-comments-container">
         <div className="comments-section">
           <h4>Comments Section</h4>
-          {parsedUser ? (
+          {parsedUser && (
             <>
               <div className="add-comment">
                 <form onSubmit={handleComments} className="submit-comment">
@@ -222,8 +222,6 @@ export default function BookDetails() {
                 </form>
               </div>
             </>
-          ) : (
-            <p>Login to comment</p>
           )}
 
           <div className="read-comment-box">
