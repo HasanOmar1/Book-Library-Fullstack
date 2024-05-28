@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../LoginAndSign-up.css";
 import { Link } from "react-router-dom";
 import { useNewUsersContext } from "../../../Context/NewUsersContext";
