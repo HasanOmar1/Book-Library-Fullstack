@@ -1,4 +1,3 @@
-import React from "react";
 import HomeTitles from "../HomeTitles/HomeTitles";
 import BookOfTheDayContainer from "../BookOfTheDayContainer/BookOfTheDayContainer";
 import WeeklyFeaturedBooksContainer from "../WeeklyFeaturedBooksContainer/WeeklyFeaturedBooksContainer";

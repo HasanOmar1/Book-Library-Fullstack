@@ -9,6 +9,9 @@ import BooksErrorModal from "../../components/Modals/BooksErrorMsg";
 import { useCommentsContext } from "../../Context/CommentsContext";
 import { useNewUsersContext } from "../../Context/NewUsersContext";
 
+const noImg =
+  "https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg";
+
 export default function BookDetails() {
   const { addBookToLibrary, booksErrorMsg, addFairyBookToLibrary } =
     useLibraryContext();
@@ -86,7 +89,7 @@ export default function BookDetails() {
                 ? newState?.imageLinks?.thumbnail
                 : state?.img
                 ? state?.img
-                : "https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"
+                : noImg
             }
             alt={newState?.title ? newState?.title : state?.title}
           />
