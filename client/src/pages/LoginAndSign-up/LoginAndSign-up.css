@@ -92,7 +92,10 @@
   padding-left: 50px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1440px) {
+  .login-sign-up .title {
+    padding-top: 50px;
+  }
   .login-sign-up .big-container {
     width: 700px;
   }

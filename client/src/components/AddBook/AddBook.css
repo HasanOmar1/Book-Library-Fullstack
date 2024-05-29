@@ -35,6 +35,7 @@
 
 .AddBook .form-container form textarea {
   width: fit-content;
+  height: 200px;
 }
 
 .AddBook .form-container form input:focus,

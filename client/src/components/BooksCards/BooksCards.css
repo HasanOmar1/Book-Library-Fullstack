@@ -70,11 +70,6 @@
   .BooksCards .book-of-the-day-container .book-of-the-day-right a {
     margin-left: 0;
   }
-
-  .BooksCards .fan-favorite-container img {
-    margin-top: 50px;
-    width: 190px;
-  }
 }
 
 @media (max-width: 1024px) {
