@@ -9,7 +9,7 @@ I have created a responsive book library using React for the frontend and MongoD
 ### Links
 
 - Frontend: https://books-library.netlify.app/
-- Backend: https://books-library-backend.cyclic.app/api/v1/books
+- Backend: https://book-library-backend-7bi6.onrender.com/api/v1
 
 ---
 
@@ -82,9 +82,8 @@ I have created a responsive book library using React for the frontend and MongoD
 
 ### Links
 
-- Backend: https://books-library-backend.cyclic.app/api/v1/books
+- Backend: https://book-library-backend-7bi6.onrender.com/api/v1
 - Frontend: https://books-library.netlify.app/
-- Frontend github: https://github.com/HasanOmar1/Books-library-frontend
 
 ---
 
@@ -111,7 +110,7 @@ I have created a responsive book library using React for the frontend and MongoD
 
 ### Endpoints
 
-- https://books-library-backend.cyclic.app
+- https://book-library-backend-7bi6.onrender.com/api/v1
 
 - Routes
   ![routes](./server/assets/routess.png)
