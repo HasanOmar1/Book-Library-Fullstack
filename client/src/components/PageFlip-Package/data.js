@@ -1,3 +1,4 @@
+// this data is scrapped using puppeteer.
 const messages = [
   { p: "In the Tianxuan World." },
   { p: "Western Frontier." },
