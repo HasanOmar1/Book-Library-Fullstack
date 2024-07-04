@@ -1,5 +1,7 @@
 .WeeklyFeaturedBooks .weekly-books {
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .WeeklyFeaturedBooks .weekly-books .book-container {

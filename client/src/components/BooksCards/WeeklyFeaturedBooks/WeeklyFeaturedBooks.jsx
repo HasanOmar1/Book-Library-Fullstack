@@ -1,4 +1,3 @@
-import React from "react";
 import { useBooksData } from "../../../Context/BooksContext";
 import "./WeeklyFeaturedBooks.css";
 import { Link } from "react-router-dom";
@@ -9,7 +8,7 @@ export default function BooksCards({ title, sliceStart, sliceEnd }) {
   return (
     <>
       <div className="weekly-featured-container ">
-        <div className="weekly-featured ">
+        <div className="weekly-featured">
           <p>{title}</p>
           <div className="books">
             <div className="BooksCards WeeklyFeaturedBooks">
