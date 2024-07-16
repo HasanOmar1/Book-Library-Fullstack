@@ -10,7 +10,6 @@ import SkeletonComp from "../../components/Skeleton/Skeleton";
 export default function Search() {
   const [results, setResults] = useState(0);
   const [searchValue, setSearchValue] = useState("");
-  // const [searchValueAfterSubmit, setSearchValueAfterSubmit] = useState(""); // for collection name
   const { books, booksByName, getBooksByName } = useBooksData();
   const { searchForFairyBooks, searchForFairyBooksByName } = useFairyContext();
 
@@ -48,17 +47,6 @@ export default function Search() {
           </button>
         </div>
       )}
-      {/* <div className="search-input-container">
-        <input
-          type="text"
-          placeholder="Search for books"
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-        />
-        <button className="search-btn">
-          <SearchIcon />
-        </button>
-      </div> */}
 
       {books ? (
         <div className="info-container">
@@ -96,27 +84,6 @@ export default function Search() {
           <SkeletonComp />
         </div>
       )}
-      {/* <div className="info-container">
-        {searchValue ? (
-          <>
-            <div className="results">
-              <p>{results} results found</p>
-            </div>
-            <div>
-              <BooksByCategories categoryName={searchValue} array={allBooks} />
-            </div>
-          </>
-        ) : (
-          <>
-            <div>
-              <BooksByCategories
-                categoryName={`Recommended`}
-                array={books?.slice(70, 85)}
-              />
-            </div>
-          </>
-        )}
-      </div> */}
     </div>
   );
 }
