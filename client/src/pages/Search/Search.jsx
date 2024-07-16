@@ -23,8 +23,10 @@ export default function Search() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      getBooksByName(searchValue);
-      searchForFairyBooksByName(searchValue);
+      if (searchValue) {
+        getBooksByName(searchValue);
+        searchForFairyBooksByName(searchValue);
+      }
     }, 500);
 
     return () => clearTimeout(timer);
