@@ -68,8 +68,13 @@ export default function BookDetails() {
   }
 
   useEffect(() => {
-    getBooksByName(state?.volumeInfo?.title);
-    getFairyBooksByName(state?.title);
+    if (state?.volumeInfo) {
+      getBooksByName(state?.volumeInfo?.title);
+    }
+
+    if (state?.content) {
+      getFairyBooksByName(state?.title);
+    }
   }, []);
 
   return (
