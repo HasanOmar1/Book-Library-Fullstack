@@ -1,15 +1,11 @@
 import axios from "../axiosConfig";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const CommentsContext = createContext();
 
 export default function CommentsContextProvider({ children }) {
   const [comments, setComments] = useState([]);
   const token = localStorage.getItem("token");
-
-  useEffect(() => {
-    fetchComments();
-  }, []);
 
   async function fetchComments() {
     try {

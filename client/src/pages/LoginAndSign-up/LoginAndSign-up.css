@@ -76,6 +76,10 @@
   background-color: #393e46;
   color: goldenrod;
   letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .login-sign-up form .register:hover {
@@ -91,6 +95,10 @@
 .login-sign-up .login-title {
   padding-left: 50px;
 }
+
+/* .login-sign-up .loader {
+
+} */
 
 @media (max-width: 1440px) {
   .login-sign-up .title {

@@ -1,11 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../LoginAndSign-up.css";
 import { Link } from "react-router-dom";
 import { useNewUsersContext } from "../../../Context/NewUsersContext";
 import ErrorModal from "../../../components/Modals/ErrorMsg";
+import { HashLoader } from "react-spinners";
 
 export default function Login() {
-  const { users, userLogin, errorMsg } = useNewUsersContext();
+  const { userLogin, errorMsg, loginStatus } = useNewUsersContext();
   const [emailValue, setEmailValue] = useState();
   const [passwordValue, setPasswordValue] = useState();
   const errorRef = useRef();
@@ -52,6 +53,9 @@ export default function Login() {
 
             <button type="submit" className="register">
               Continue
+              {!loginStatus && (
+                <HashLoader color="#36d7b7" className="loader" size={30} />
+              )}
             </button>
           </form>
           <p className="login">
