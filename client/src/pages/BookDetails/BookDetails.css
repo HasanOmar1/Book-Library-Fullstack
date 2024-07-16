@@ -249,7 +249,7 @@
 }
 
 .BookDetails .remove-comment:hover {
-  color: black;
+  background-color: crimson;
 }
 
 .BookDetails .read-comment .comment {
