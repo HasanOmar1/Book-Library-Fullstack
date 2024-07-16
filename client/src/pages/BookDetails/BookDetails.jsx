@@ -28,7 +28,6 @@ export default function BookDetails() {
   const [commentValue, setCommentValue] = useState("");
 
   const { currentUser } = useNewUsersContext();
-  console.log(state);
 
   const errorRef = useRef();
 

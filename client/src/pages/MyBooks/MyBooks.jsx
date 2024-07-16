@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./MyBooks.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
@@ -11,13 +11,9 @@ import { useNewBookContext } from "../../Context/NewBookContext";
 
 export default function MyBooks() {
   const navigate = useNavigate();
-  const { fairyBooks, getFairyBooks } = useFairyContext();
+  const { fairyBooks } = useFairyContext();
   const { currentUser } = useNewUsersContext();
   const { removeMyBook } = useNewBookContext();
-
-  useEffect(() => {
-    getFairyBooks();
-  }, []);
 
   return (
     <div className="CategoryBooksCards MyBooks">
