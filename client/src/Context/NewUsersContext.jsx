@@ -26,7 +26,7 @@ export default function NewUsersProvider({ children }) {
       const response = await axios.get("/users");
       setUsers(response.data);
     } catch (error) {
-      console.log(error.response.data.message);
+      // console.log(error.response.data.message);
       setErrorMsg(error.response.data.message);
     }
   }
@@ -42,7 +42,7 @@ export default function NewUsersProvider({ children }) {
       setLoginStatus(true);
       navigate("/");
     } catch (error) {
-      console.log(error.response.data.message);
+      // console.log(error.response.data.message);
       setErrorMsg(error.response.data.message);
     } finally {
       setLoginStatus(true);
@@ -57,7 +57,7 @@ export default function NewUsersProvider({ children }) {
       setRegisterStatus(true);
       navigate("/login");
     } catch (error) {
-      console.log(error.response.data.message);
+      // console.log(error.response.data.message);
       setErrorMsg(error.response.data.message);
     } finally {
       setRegisterStatus(true);

@@ -16,7 +16,6 @@
 .CategoryBooksCards .container {
   display: flex;
   width: 600px;
-  height: 300px;
   padding: 20px;
   background-color: #1e2525;
   border-radius: 20px;

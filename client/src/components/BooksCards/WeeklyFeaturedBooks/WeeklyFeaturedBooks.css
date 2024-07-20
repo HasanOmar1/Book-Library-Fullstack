@@ -40,7 +40,6 @@
     overflow: auto;
     white-space: nowrap;
     width: 500px;
-    flex-wrap: nowrap;
   }
 }
 
