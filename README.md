@@ -4,7 +4,7 @@
 
 ### Site Preview Video
 
-[![Watch the video](http://i3.ytimg.com/vi/5ns0RbKOMmw/hqdefault.jpg)](https://www.youtube.com/watch?v=5ns0RbKOMmw)
+[![Watch the video](https://i3.ytimg.com/vi/ATxQpqJ1TVU/maxresdefault.jpg)](https://www.youtube.com/watch?v=5ns0RbKOMmw)
 
 https://www.youtube.com/watch?v=5ns0RbKOMmw
 
