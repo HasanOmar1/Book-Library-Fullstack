@@ -2,6 +2,12 @@
 
 ## Click on client or server to read the README file for each one , or read both here.
 
+# Site Preview Video
+
+[![Watch the video](http://i3.ytimg.com/vi/5ns0RbKOMmw/hqdefault.jpg)](https://www.youtube.com/watch?v=5ns0RbKOMmw)
+
+https://www.youtube.com/watch?v=5ns0RbKOMmw
+
 ## Book Library Frontend
 
 I have created a responsive book library using React for the frontend and MongoDB for the backend.
