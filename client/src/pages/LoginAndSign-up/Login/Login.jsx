@@ -10,12 +10,17 @@ export default function Login() {
   const [emailValue, setEmailValue] = useState();
   const [passwordValue, setPasswordValue] = useState();
   const errorRef = useRef();
+  const inputRef = useRef();
 
   useEffect(() => {
     if (errorMsg) {
       errorRef?.current?.showModal();
     }
   }, [errorMsg]);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   function handleOnSubmit(e) {
     e.preventDefault();
@@ -44,6 +49,7 @@ export default function Login() {
               type="email"
               placeholder="Email"
               onChange={(e) => setEmailValue(e.target.value)}
+              ref={inputRef}
             />
             <input
               type="password"

@@ -13,6 +13,11 @@ export default function SignUp() {
   const { createUser, errorMsg, registerStatus } = useNewUsersContext();
 
   const errorRef = useRef();
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   useEffect(() => {
     if (errorMsg) {
@@ -47,6 +52,7 @@ export default function SignUp() {
               type="text"
               placeholder="Name"
               onChange={(e) => setNameValue(e.target.value)}
+              ref={inputRef}
             />
             <input
               type="email"
