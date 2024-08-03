@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./AddBook.css";
 import { useNewBookContext } from "../../Context/NewBookContext";
 import { useNewUsersContext } from "../../Context/NewUsersContext";
@@ -12,6 +12,10 @@ export default function AddBook() {
   const descRef = useRef();
   const categoryRef = useRef();
   const coverRef = useRef();
+
+  useEffect(() => {
+    titleRef.current.focus();
+  }, []);
 
   function handleAddBook(e) {
     e.preventDefault();
