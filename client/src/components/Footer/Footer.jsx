@@ -6,8 +6,8 @@ export default function Footer() {
     <section className="Footer">
       <div className="footer-container">
         <div className="used">
-          <p>Frameworks & Packages</p>
-          <ul>
+          <p id="frameworks-and-packages">Frameworks & Packages</p>
+          <ul aria-labelledby="frameworks-and-packages">
             <li>Material UI</li>
             <li>Bootstrap</li>
             <li>React page-flip</li>
