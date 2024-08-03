@@ -58,7 +58,11 @@ function Header() {
             )}
 
             <Nav.Link as="li" href="#search" className="move-right">
-              <Link to={"/search"} className="nav-link">
+              <Link
+                to={"/search"}
+                className="nav-link"
+                aria-label="Goes to search page"
+              >
                 <SearchIcon className="search-icon" />
               </Link>
             </Nav.Link>

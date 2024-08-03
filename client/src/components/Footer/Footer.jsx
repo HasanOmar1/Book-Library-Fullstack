@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import MarkunreadTwoToneIcon from "@mui/icons-material/MarkunreadTwoTone";
 
@@ -20,6 +19,9 @@ export default function Footer() {
             href="https://mail.google.com/mail/u/0/?fs=1&to=hasanromar2002@gmail.com&tf=cm"
             target="_blank"
             className="mail-to"
+            rel="noreferrer"
+            aria-label="goes to gmail to send a mail to the developer"
+            role="button"
           >
             <MarkunreadTwoToneIcon className="icon" />
           </a>
