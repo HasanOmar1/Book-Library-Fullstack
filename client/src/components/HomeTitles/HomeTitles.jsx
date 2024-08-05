@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function HomeTitles({ title, id }) {
   return (
     <div className="title-container">

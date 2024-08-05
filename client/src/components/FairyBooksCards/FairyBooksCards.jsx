@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useFairyContext } from "../../Context/FairyBooksContext";
 
@@ -14,6 +13,7 @@ export default function FairyBooksCards() {
               to={`${info?.title}`}
               state={info}
               className="link"
+              aria-label={`Fairy tale title: ${info?.title}`}
             >
               <div className="book-container">
                 <img
@@ -23,6 +23,7 @@ export default function FairyBooksCards() {
                       : "https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"
                   }
                   alt={info?.title}
+                  aria-hidden
                 />
                 <div className="category">{info?.title}</div>
               </div>

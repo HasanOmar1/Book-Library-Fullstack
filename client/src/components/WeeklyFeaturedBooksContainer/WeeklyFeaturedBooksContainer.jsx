@@ -1,4 +1,3 @@
-import React from "react";
 import HomeTitles from "../HomeTitles/HomeTitles";
 import WeeklyFeaturedBooks from "../BooksCards/WeeklyFeaturedBooks/WeeklyFeaturedBooks";
 

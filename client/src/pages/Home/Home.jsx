@@ -38,7 +38,12 @@ export default function Home() {
 
           <HomeDataContainer />
 
-          <a href="#top" id="go-top">
+          <a
+            href="#top"
+            id="go-top"
+            role="button"
+            aria-label="Click to go back to the top of the page"
+          >
             <FaArrowUp />
           </a>
         </>

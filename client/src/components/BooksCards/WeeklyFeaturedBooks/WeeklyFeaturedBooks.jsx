@@ -20,11 +20,13 @@ export default function BooksCards({ title, sliceStart, sliceEnd }) {
                       to={`${info?.volumeInfo?.title}`}
                       state={info}
                       className="link"
+                      aria-label={`Book Title: ${info?.volumeInfo?.title} , Book Category: ${info?.volumeInfo?.categories}`}
                     >
                       <div className="book-container">
                         <img
                           src={info?.volumeInfo?.imageLinks?.thumbnail}
                           alt={info?.volumeInfo?.title}
+                          aria-hidden
                         />
                         <div className="category">
                           {info?.volumeInfo?.categories}
