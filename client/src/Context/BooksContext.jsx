@@ -1,5 +1,5 @@
 import axios from "../axiosConfig";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const BooksContext = createContext();
 
@@ -19,9 +19,17 @@ export default function BooksProvider({ children }) {
   const [romanceBooks, setRomanceBooks] = useState([]);
   const [cookingBooks, setCookingBooks] = useState([]);
   const [horrorBooks, setHorrorBooks] = useState([]);
+  const [bookOfTheDay, setBookOfTheDay] = useState(null);
 
   useEffect(() => {
     fetchBooks();
+    getBookOfTheDay();
+
+    const intervalId = setInterval(() => {
+      getBookOfTheDay();
+    }, 30000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   //fetches all books
@@ -34,10 +42,18 @@ export default function BooksProvider({ children }) {
     }
   }
 
+  async function getBookOfTheDay() {
+    try {
+      const { data } = await axios.get("/books/randomBook");
+      setBookOfTheDay(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async function getBooksByName(bookName) {
     try {
       const response = await axios.get(`/books/search/${bookName}`);
-
       setBooksByName(response.data);
     } catch (error) {
       setErrorMsg(error.response.data.message);
@@ -86,15 +102,6 @@ export default function BooksProvider({ children }) {
     try {
       const response = await axios.get(`/books/category/criticism`);
       setCriticismBooks(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  async function getHowToBooks() {
-    try {
-      const response = await axios.get(`/books/search/how to`);
-      setHowToBooks(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -167,6 +174,8 @@ export default function BooksProvider({ children }) {
       value={{
         books,
         fetchBooks,
+        bookOfTheDay,
+        getBookOfTheDay,
         getFictionBooks,
         fictionBooks,
         getComicsBooks,

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Home.css";
 import { useNewUsersContext } from "../../Context/NewUsersContext";
 import { useBooksData } from "../../Context/BooksContext";
@@ -8,6 +8,7 @@ import { HashLoader } from "react-spinners";
 import HomeDataContainer from "../../components/HomeDataContainer/HomeDataContainer";
 
 export default function Home() {
+  // const [currentBook, setCurrentBook] = useState(null);
   const { setCurrentUser, currentUser } = useNewUsersContext();
   const { books } = useBooksData();
 
@@ -17,7 +18,17 @@ export default function Home() {
       const foundUser = JSON.parse(loggedInUser);
       setCurrentUser(foundUser);
     }
-  }, []);
+  }, [setCurrentUser]);
+
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     if (books) {
+  //       const randomNum = Math.floor(Math.random() * books.length);
+  //       setCurrentBook(books[randomNum]);
+  //       // console.log(randomNum);
+  //     }
+  //   }, 2000);
+  // }, [books]);
 
   const loggedUser = localStorage.getItem("user");
 

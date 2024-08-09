@@ -1,44 +1,44 @@
-import React from "react";
 import { useBooksData } from "../../Context/BooksContext";
 import "./BooksCards.css";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
-export default function BookOfTheDay({ sliceStart, sliceEnd }) {
-  const { books } = useBooksData();
+export default function BookOfTheDay() {
+  const { bookOfTheDay } = useBooksData();
 
   return (
     <div className="BooksCards">
       <div className="big-book">
-        {books.slice(sliceStart, sliceEnd).map((info) => {
-          return (
-            <div key={info?._id} className="book-of-the-day-container">
+        {bookOfTheDay ? (
+          <>
+            <div key={bookOfTheDay._id} className="book-of-the-day-container">
               <div className="book-of-the-day-left">
                 <Link
-                  to={`${info?.volumeInfo?.title.slice(0, 6)}`}
-                  state={info}
+                  to={`${bookOfTheDay.volumeInfo.title.slice(0, 6)}`}
+                  state={bookOfTheDay}
                 >
                   <img
-                    src={info?.volumeInfo?.imageLinks?.thumbnail}
-                    alt={info?.volumeInfo?.title}
+                    src={bookOfTheDay.volumeInfo.imageLinks?.thumbnail}
+                    alt={bookOfTheDay.volumeInfo.title}
                   />
                 </Link>
               </div>
               <div className="book-of-the-day-right">
-                <h5>{info?.volumeInfo?.title}</h5>
+                <h5>{bookOfTheDay.volumeInfo.title}</h5>
                 <div className="author-category">
                   <p>
-                    By: <span>{info?.volumeInfo?.authors}</span>
+                    By: <span>{bookOfTheDay.volumeInfo.authors}</span>
                   </p>
                   <p>
-                    Categories: <span>{info?.volumeInfo?.categories}</span>
+                    Categories:{" "}
+                    <span>{bookOfTheDay.volumeInfo.categories}</span>
                   </p>
                 </div>
-                <p>{info?.volumeInfo?.description}</p>
+                <p>{bookOfTheDay.volumeInfo.description}</p>
 
                 <Link
-                  to={`${info?.volumeInfo?.title.slice(0, 6)}`}
-                  state={info}
+                  to={`${bookOfTheDay.volumeInfo.title.slice(0, 6)}`}
+                  state={bookOfTheDay}
                 >
                   <Button variant="info" className="more-info">
                     More Info
@@ -46,8 +46,10 @@ export default function BookOfTheDay({ sliceStart, sliceEnd }) {
                 </Link>
               </div>
             </div>
-          );
-        })}
+          </>
+        ) : (
+          <div style={{ textAlign: "center" }}>Loading Data</div>
+        )}
       </div>
     </div>
   );

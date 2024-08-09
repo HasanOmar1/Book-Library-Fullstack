@@ -15,6 +15,39 @@ export const getBooks = async (req, res, next) => {
   }
 };
 
+let currentBook = {};
+
+async function selectRandomBook() {
+  const books = await Books.find({}).populate({
+    path: "comments",
+    populate: { path: "user" },
+  });
+  const randomNum = Math.floor(Math.random() * books.length);
+  currentBook = books[randomNum];
+}
+
+selectRandomBook();
+
+setInterval(() => {
+  selectRandomBook();
+}, 30000);
+
+export const getRandomBook = async (req, res, next) => {
+  try {
+    // const books = await Books.find({}).populate({
+    //   path: "comments",
+    //   populate: { path: "user" },
+    // });
+    // console.log(books.length);
+    // const randomNum = Math.floor(Math.random() * books.length);
+    // currentBook = books[randomNum];
+    // console.log(currentBook);
+    res.send(currentBook);
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const addBook = async (req, res, next) => {
   try {
     const book = await Books.create(req.body);

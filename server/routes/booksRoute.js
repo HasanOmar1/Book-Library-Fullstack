@@ -8,6 +8,7 @@ import {
   findBookByName,
   getBooksByCategory,
   findBookByAuthor,
+  getRandomBook,
 } from "../controllers/booksController.js";
 import { protect } from "../middlewares/authMiddleware.js";
 
@@ -16,6 +17,7 @@ const router = express.Router();
 // api/v1/books
 
 router.get("/", getBooks); // gets all books
+router.get("/randomBook", getRandomBook); // gets all books
 router.get("/search/:name", findBookByName); // gets books by name
 router.get("/search", findBookByName); // checks if search length === 0
 router.get("/category/:category", getBooksByCategory); // gets books by category

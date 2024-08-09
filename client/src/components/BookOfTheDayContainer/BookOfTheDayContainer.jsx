@@ -1,4 +1,3 @@
-import React from "react";
 import BookOfTheDay from "../BooksCards/BookOfTheDay";
 import HomeTitles from "../HomeTitles/HomeTitles";
 
@@ -9,7 +8,7 @@ export default function BookOfTheDayContainer() {
         <HomeTitles title={"Book of the day"} />
 
         <div className="book-of-the-day">
-          <BookOfTheDay sliceStart={26} sliceEnd={27} />
+          <BookOfTheDay />
         </div>
       </div>
     </div>
