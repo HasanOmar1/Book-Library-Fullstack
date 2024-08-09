@@ -27,7 +27,7 @@ export default function BooksProvider({ children }) {
 
     const intervalId = setInterval(() => {
       getBookOfTheDay();
-    }, 30000);
+    }, 86400);
 
     return () => clearInterval(intervalId);
   }, []);

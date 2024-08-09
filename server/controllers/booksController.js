@@ -30,18 +30,10 @@ selectRandomBook();
 
 setInterval(() => {
   selectRandomBook();
-}, 30000);
+}, 86400);
 
 export const getRandomBook = async (req, res, next) => {
   try {
-    // const books = await Books.find({}).populate({
-    //   path: "comments",
-    //   populate: { path: "user" },
-    // });
-    // console.log(books.length);
-    // const randomNum = Math.floor(Math.random() * books.length);
-    // currentBook = books[randomNum];
-    // console.log(currentBook);
     res.send(currentBook);
   } catch (error) {
     next(error);
