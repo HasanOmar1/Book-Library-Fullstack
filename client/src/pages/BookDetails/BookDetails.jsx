@@ -31,9 +31,6 @@ export default function BookDetails() {
 
   const errorRef = useRef();
 
-  const loggedUser = localStorage.getItem("user");
-  const parsedUser = JSON.parse(loggedUser);
-
   if (booksErrorMsg) {
     errorRef?.current?.showModal();
   }
@@ -213,7 +210,7 @@ export default function BookDetails() {
       <div className="read-comments-container">
         <div className="comments-section">
           <h4>Comments Section</h4>
-          {parsedUser && (
+          {currentUser && (
             <>
               <div className="add-comment">
                 <form onSubmit={handleComments} className="submit-comment">

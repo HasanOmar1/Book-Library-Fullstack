@@ -1,13 +1,12 @@
-import React from "react";
 import "./ErrorMsg.css";
 import { forwardRef } from "react";
 import { useLibraryContext } from "../../Context/LibraryContext";
 
 const BooksErrorModal = forwardRef(function Dialog({ children }, ref) {
-  const { booksErrorMsg, setBooksErrorMsg } = useLibraryContext();
+  const { booksErrorMsg, setBooksMsg } = useLibraryContext();
 
   function closeDialog() {
-    setBooksErrorMsg("");
+    setBooksMsg("");
   }
 
   return (

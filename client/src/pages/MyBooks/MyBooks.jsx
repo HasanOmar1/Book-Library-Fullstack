@@ -59,7 +59,7 @@ export default function MyBooks() {
                   </div>
                   <div className="desc-container">
                     <p className="description">
-                      {books?.description.slice(0, 121) + " ..."}
+                      {books?.description.slice(0, 40) + " ..."}
                     </p>
                   </div>
                   <div className="btns">

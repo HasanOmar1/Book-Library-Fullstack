@@ -8,27 +8,8 @@ import { HashLoader } from "react-spinners";
 import HomeDataContainer from "../../components/HomeDataContainer/HomeDataContainer";
 
 export default function Home() {
-  // const [currentBook, setCurrentBook] = useState(null);
-  const { setCurrentUser, currentUser } = useNewUsersContext();
+  const { currentUser } = useNewUsersContext();
   const { books } = useBooksData();
-
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem("user");
-    if (loggedInUser) {
-      const foundUser = JSON.parse(loggedInUser);
-      setCurrentUser(foundUser);
-    }
-  }, [setCurrentUser]);
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     if (books) {
-  //       const randomNum = Math.floor(Math.random() * books.length);
-  //       setCurrentBook(books[randomNum]);
-  //       // console.log(randomNum);
-  //     }
-  //   }, 2000);
-  // }, [books]);
 
   const loggedUser = localStorage.getItem("user");
 

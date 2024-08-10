@@ -23,9 +23,9 @@ export default function Search() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (searchValue) {
-        getBooksByName(searchValue);
-        searchForFairyBooksByName(searchValue);
+      if (searchValue.trim()) {
+        getBooksByName(searchValue.trim());
+        searchForFairyBooksByName(searchValue.trim());
       }
     }, 500);
 
@@ -52,7 +52,7 @@ export default function Search() {
 
       {books ? (
         <div className="info-container">
-          {searchValue ? (
+          {searchValue.trim() ? (
             <>
               <div className="results">
                 <p>{results} results found</p>

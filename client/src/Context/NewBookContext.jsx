@@ -1,22 +1,17 @@
-import React, { createContext, useContext } from "react";
+import { createContext, useContext } from "react";
 import axios from "../axiosConfig";
 import { useFairyContext } from "./FairyBooksContext";
-import { useNewUsersContext } from "./NewUsersContext";
 import { toast } from "react-toastify";
 
 const NewBookContext = createContext();
 
-const token = localStorage.getItem("token");
-
 export default function NewBookProvider({ children }) {
   const { getFairyBooks } = useFairyContext();
-  const { setCurrentUser } = useNewUsersContext();
 
   async function addNewBook(book) {
     try {
-      const response = await axios.post("/fairy", book, {
-        headers: { authorization: `Bearer ${token}` },
-      });
+      await axios.post("/fairy", book);
+      getFairyBooks();
       toast.success("Book added successfully");
     } catch (error) {
       console.log(error);
@@ -25,17 +20,9 @@ export default function NewBookProvider({ children }) {
 
   async function removeMyBook(bookId) {
     try {
-      const response = await axios.delete(`/fairy/${bookId}`);
-
-      if (response.data.fairyBooks) {
-        const userJSON = JSON.stringify(response.data);
-        localStorage.setItem("user", userJSON);
-        setCurrentUser(response.data);
-        getFairyBooks();
-      }
-      toast.error("Book has been deleted");
-
+      await axios.delete(`/fairy/${bookId}`);
       getFairyBooks();
+      toast.error("Book has been deleted");
     } catch (error) {
       console.log(error.response.data.message);
     }

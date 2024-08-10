@@ -12,14 +12,13 @@ export default function NewUsersProvider({ children }) {
 
   const navigate = useNavigate();
 
+  const token = localStorage.getItem("token");
+
   useEffect(() => {
-    const loggedUser = localStorage.getItem("user");
-    if (loggedUser) {
-      const parsedUser = JSON.parse(loggedUser);
-      setCurrentUser(parsedUser);
+    if (token) {
+      currentLoggedUser();
     }
-    currentLoggedUser();
-  }, []);
+  }, [token]);
 
   //fetch users
   async function usersAPI() {
@@ -36,9 +35,7 @@ export default function NewUsersProvider({ children }) {
     setLoginStatus(false);
     try {
       const response = await axios.post("/users/login", user);
-      setCurrentUser(response.data);
-      const userJSON = JSON.stringify(response.data);
-      localStorage.setItem("user", userJSON);
+      currentLoggedUser();
       localStorage.setItem("token", response.data.token);
       setLoginStatus(true);
       navigate("/");
@@ -68,7 +65,7 @@ export default function NewUsersProvider({ children }) {
   async function currentLoggedUser() {
     try {
       const { data } = await axios.get("/users/currentUser");
-      console.log(data);
+      setCurrentUser(data);
     } catch (error) {
       console.log(error);
     }
@@ -87,6 +84,7 @@ export default function NewUsersProvider({ children }) {
         usersAPI,
         loginStatus,
         registerStatus,
+        currentLoggedUser,
       }}
     >
       {children}

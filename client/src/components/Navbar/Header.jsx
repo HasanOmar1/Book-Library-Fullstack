@@ -8,14 +8,14 @@ import "./Header.css";
 import { ToastContainer } from "react-toastify";
 
 function Header() {
-  const { setCurrentUser } = useNewUsersContext();
+  const { setCurrentUser, currentUser } = useNewUsersContext();
   const navigate = useNavigate();
 
-  const loggedUser = localStorage.getItem("user");
+  // const loggedUser = localStorage.getItem("user");
 
   function handleLogOut() {
     localStorage.clear();
-    setCurrentUser({});
+    setCurrentUser(null);
     navigate("/");
   }
 
@@ -47,7 +47,7 @@ function Header() {
                 Home
               </Link>
             </Nav.Link>
-            {loggedUser && (
+            {currentUser && (
               <>
                 <Nav.Link as="li" href="#home">
                   <Link to={"/add-book"} className="nav-link books">
@@ -67,7 +67,7 @@ function Header() {
               </Link>
             </Nav.Link>
 
-            {!loggedUser && (
+            {!currentUser && (
               <>
                 <Nav.Link as="li" href="#login">
                   <Link to={"/login"} className="nav-link">
@@ -83,7 +83,7 @@ function Header() {
               </>
             )}
 
-            {loggedUser && (
+            {currentUser && (
               <>
                 <Nav.Link as="li" href="#library">
                   <Link to={"/library"} className="nav-link library">
