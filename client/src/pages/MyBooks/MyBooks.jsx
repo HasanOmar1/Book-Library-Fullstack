@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./MyBooks.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
@@ -10,10 +10,18 @@ import { useNewUsersContext } from "../../Context/NewUsersContext";
 import { useNewBookContext } from "../../Context/NewBookContext";
 
 export default function MyBooks() {
+  const [isThereABook, setIsThereABook] = useState();
   const navigate = useNavigate();
   const { fairyBooks } = useFairyContext();
   const { currentUser } = useNewUsersContext();
   const { removeMyBook } = useNewBookContext();
+
+  useEffect(() => {
+    const myBook = fairyBooks?.findIndex(
+      (book) => book.author === currentUser.name
+    );
+    setIsThereABook(myBook);
+  }, [fairyBooks, currentUser]);
 
   return (
     <div className="CategoryBooksCards MyBooks">
@@ -27,7 +35,11 @@ export default function MyBooks() {
       </div>
 
       <div className="big-container">
-        {fairyBooks?.length === 0 && <h4>You don't have any books</h4>}
+        {isThereABook === -1 && (
+          <h4 style={{ textAlign: "center", width: "100%" }}>
+            You don't have any books
+          </h4>
+        )}
 
         {fairyBooks?.map((books, i) => (
           <React.Fragment key={i}>
