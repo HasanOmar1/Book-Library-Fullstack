@@ -117,18 +117,14 @@ export const deleteUser = async (req, res, next) => {
 
 export const getLoggedUser = async (req, res, next) => {
   try {
-    // {_id , name , email , books}
-    const user = await User.findById(req.user.id);
+    const user = await User.findById(req.user._id)
+      .populate("books")
+      .populate("fairyBooks");
     if (!user) {
       res.status(STATUS_CODE.NOT_FOUND);
       throw new Error("User not found");
     }
-    res.send({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      books: user.books,
-    });
+    res.send(user);
   } catch (error) {
     next(error);
   }
