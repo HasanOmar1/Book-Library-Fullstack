@@ -69,13 +69,14 @@ export const login = async (req, res, next) => {
       .populate("books")
       .populate("fairyBooks");
     if (user && (await bcrypt.compare(password, user.password))) {
+      const token = generateToken(user._id, user.email);
       res.send({
         _id: user.id,
         name: user.name,
         email: user.email,
         books: user.books,
         fairyBooks: user.fairyBooks,
-        token: generateToken(user._id, user.email),
+        token,
       });
     } else {
       res.status(STATUS_CODE.NOT_FOUND);
