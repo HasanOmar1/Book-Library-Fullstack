@@ -2,6 +2,8 @@ import STATUS_CODE from "../constants/statusCode.js";
 import Books from "../models/bookModel.js";
 import User from "../models/usersModel.js";
 
+const AFTER_24HOURS = 86400;
+
 export const getBooks = async (req, res, next) => {
   try {
     const books = await Books.find({}).populate({
@@ -30,7 +32,7 @@ selectRandomBook();
 
 setInterval(() => {
   selectRandomBook();
-}, 86400);
+}, AFTER_24HOURS);
 
 export const getRandomBook = async (req, res, next) => {
   try {

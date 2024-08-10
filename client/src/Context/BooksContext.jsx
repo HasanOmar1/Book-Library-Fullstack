@@ -24,12 +24,6 @@ export default function BooksProvider({ children }) {
   useEffect(() => {
     fetchBooks();
     getBookOfTheDay();
-
-    const intervalId = setInterval(() => {
-      getBookOfTheDay();
-    }, 86400);
-
-    return () => clearInterval(intervalId);
   }, []);
 
   //fetches all books

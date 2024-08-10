@@ -34,7 +34,11 @@ export default function BookOfTheDay() {
                     <span>{bookOfTheDay.volumeInfo.categories}</span>
                   </p>
                 </div>
-                <p>{bookOfTheDay.volumeInfo.description}</p>
+                <p>
+                  {bookOfTheDay.volumeInfo.description.length > 300
+                    ? bookOfTheDay.volumeInfo.description.slice(0, 300) + " ..."
+                    : bookOfTheDay.volumeInfo.description}
+                </p>
 
                 <Link
                   to={`${bookOfTheDay.volumeInfo.title.slice(0, 6)}`}
