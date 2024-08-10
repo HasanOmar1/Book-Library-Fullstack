@@ -17,10 +17,7 @@ export default function CommentsContextProvider({ children }) {
 
   async function createComment(comment) {
     try {
-      const config = {
-        headers: { authorization: `Bearer ${token}` },
-      };
-      const response = await axios.post("/comments/create", comment, config);
+      const response = await axios.post("/comments/create", comment);
       setComments(response.data.comments);
     } catch (error) {
       console.log(error.response.data.message);

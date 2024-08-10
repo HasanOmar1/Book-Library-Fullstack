@@ -18,6 +18,7 @@ export default function NewUsersProvider({ children }) {
       const parsedUser = JSON.parse(loggedUser);
       setCurrentUser(parsedUser);
     }
+    currentLoggedUser();
   }, []);
 
   //fetch users
@@ -61,6 +62,15 @@ export default function NewUsersProvider({ children }) {
       setErrorMsg(error.response.data.message);
     } finally {
       setRegisterStatus(true);
+    }
+  }
+
+  async function currentLoggedUser() {
+    try {
+      const { data } = await axios.get("/users/currentUser");
+      console.log(data);
+    } catch (error) {
+      console.log(error);
     }
   }
 

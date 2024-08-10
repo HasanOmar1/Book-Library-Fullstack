@@ -25,10 +25,7 @@ export default function NewBookProvider({ children }) {
 
   async function removeMyBook(bookId) {
     try {
-      const config = {
-        headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
-      };
-      const response = await axios.delete(`/fairy/${bookId}`, config);
+      const response = await axios.delete(`/fairy/${bookId}`);
 
       if (response.data.fairyBooks) {
         const userJSON = JSON.stringify(response.data);

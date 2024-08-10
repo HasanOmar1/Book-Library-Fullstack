@@ -68,6 +68,7 @@ export const login = async (req, res, next) => {
     const user = await User.findOne({ email })
       .populate("books")
       .populate("fairyBooks");
+
     if (user && (await bcrypt.compare(password, user.password))) {
       const token = generateToken(user._id, user.email);
       res.send({

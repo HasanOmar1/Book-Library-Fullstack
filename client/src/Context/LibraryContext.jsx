@@ -11,16 +11,9 @@ export default function LibraryProvider({ children }) {
 
   async function addBookToLibrary(bookId) {
     try {
-      const config = {
-        headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
-      };
       const token = localStorage.getItem("token");
       if (token) {
-        const response = await axios.put(
-          `/books/addBook/${bookId}`,
-          {},
-          config
-        );
+        const response = await axios.put(`/books/addBook/${bookId}`, {});
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
         setCurrentUser(response.data);
@@ -37,16 +30,9 @@ export default function LibraryProvider({ children }) {
 
   async function removeBookFromLibrary(bookId) {
     try {
-      const config = {
-        headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
-      };
       const token = localStorage.getItem("token");
       if (token) {
-        const response = await axios.put(
-          `/books/removeBook/${bookId}`,
-          {},
-          config
-        );
+        const response = await axios.put(`/books/removeBook/${bookId}`, {});
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
         setCurrentUser(response.data);
@@ -63,16 +49,9 @@ export default function LibraryProvider({ children }) {
 
   async function addFairyBookToLibrary(bookId) {
     try {
-      const config = {
-        headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
-      };
       const token = localStorage.getItem("token");
       if (token) {
-        const response = await axios.put(
-          `/fairy/addBook/${bookId}`,
-          {},
-          config
-        );
+        const response = await axios.put(`/fairy/addBook/${bookId}`, {});
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
         setCurrentUser(response.data);
@@ -89,16 +68,9 @@ export default function LibraryProvider({ children }) {
 
   async function removeFairyBookFromLibrary(bookId) {
     try {
-      const config = {
-        headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
-      };
       const token = localStorage.getItem("token");
       if (token) {
-        const response = await axios.put(
-          `/fairy/removeBook/${bookId}`,
-          {},
-          config
-        );
+        const response = await axios.put(`/fairy/removeBook/${bookId}`, {});
         const userJSON = JSON.stringify(response.data);
         localStorage.setItem("user", userJSON);
         setCurrentUser(response.data);
