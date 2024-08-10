@@ -11,13 +11,11 @@ export default function Home() {
   const { currentUser } = useNewUsersContext();
   const { books } = useBooksData();
 
-  const loggedUser = localStorage.getItem("user");
-
   return (
     <main className="Home Page">
       {books ? (
         <>
-          {loggedUser && (
+          {currentUser && (
             <>
               <div className="logged-user">
                 <h5>
