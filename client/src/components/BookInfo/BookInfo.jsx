@@ -64,9 +64,11 @@ const BookInfo = ({ newState, state, addToLibraryFunction }) => {
         <div className="small-p">
           <h5>
             <span>
+              {console.log(newState)}
               {newState?.pageCount ??
-                Math.ceil(state?.content.join("").length / 702) ??
-                "UnKnown"}
+                (state?.content
+                  ? Math.ceil(state?.content?.join("").length / 702)
+                  : 211)}
             </span>
           </h5>
           <p>Pages</p>
@@ -87,9 +89,7 @@ const BookInfo = ({ newState, state, addToLibraryFunction }) => {
         </div>
       </div>
       <div className="rating">
-        <StarsRating
-          rate={newState?.averageRating ? newState?.averageRating : 3}
-        />
+        <StarsRating rate={newState?.averageRating ?? 3} />
       </div>
       <div className="buttons">
         <Link
