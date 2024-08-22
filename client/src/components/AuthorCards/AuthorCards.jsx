@@ -1,4 +1,3 @@
-import React from "react";
 import "./AuthorCards.css";
 import authors from "./authors";
 import { Link } from "react-router-dom";

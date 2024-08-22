@@ -113,6 +113,7 @@ export default function BookDetails() {
         handleComments={handleComments}
         removeComment={removeComment}
         setCommentValue={setCommentValue}
+        state={state}
       />
 
       <BooksErrorModal ref={errorRef} />

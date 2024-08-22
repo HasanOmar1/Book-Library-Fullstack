@@ -82,7 +82,9 @@
   font-size: 0.9rem;
 }
 .CategoryBooksCards .middle {
-  margin: auto;
+  width: 100%;
+  text-align: center;
+  margin-left: -70px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1440px) {

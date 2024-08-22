@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./CategoryBooks.css";
 import StarsRating from "../../Rating/Rating";
 import { Link, useNavigate } from "react-router-dom";
@@ -37,11 +37,7 @@ export default function BooksByCategories({ categoryName, array }) {
           return (
             <div className="container" key={i}>
               <Link
-                to={`/${
-                  books?.volumeInfo?.title
-                    ? books?.volumeInfo?.title
-                    : books?.title
-                }`}
+                to={`/${books?.volumeInfo?.title ?? books?.title}`}
                 state={books}
               >
                 <img
@@ -52,28 +48,16 @@ export default function BooksByCategories({ categoryName, array }) {
                       ? books?.img
                       : "https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"
                   }
-                  alt={
-                    books?.volumeInfo?.title
-                      ? books?.volumeInfo?.title
-                      : books?.title
-                  }
+                  alt={books?.volumeInfo?.title ?? books?.title}
                 />
               </Link>
               <div className="book-info">
                 <Link
-                  to={`/${
-                    books?.volumeInfo?.title
-                      ? books?.volumeInfo?.title
-                      : books?.title
-                  }`}
+                  to={`/${books?.volumeInfo?.title ?? books?.title}`}
                   state={books}
                   className="link"
                 >
-                  <h6 id="title">
-                    {books?.volumeInfo?.title
-                      ? books?.volumeInfo?.title
-                      : books?.title}
-                  </h6>
+                  <h6 id="title">{books?.volumeInfo?.title ?? books?.title}</h6>
                 </Link>
                 <h6>
                   Written by

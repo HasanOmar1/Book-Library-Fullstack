@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "./Home.css";
 import { useNewUsersContext } from "../../Context/NewUsersContext";
 import { useBooksData } from "../../Context/BooksContext";

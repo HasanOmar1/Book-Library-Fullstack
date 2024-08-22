@@ -79,14 +79,12 @@ function App() {
                         path={"/books-by-people"}
                         element={<BooksByPeople />}
                       />
-                      {/*  */}
 
                       {/* Authors */}
                       <Route path={"/j-k-rowling"} element={<Rowling />} />
                       <Route path={"/george-martin"} element={<George />} />
                       <Route path={"/stan-Lee"} element={<StanLee />} />
                       <Route path={"/stephen-king"} element={<StephenKing />} />
-                      {/*  */}
                     </Routes>
                     <Footer />
                   </NewBookProvider>

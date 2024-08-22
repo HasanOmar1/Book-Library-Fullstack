@@ -51,7 +51,7 @@ export default function AddBook() {
               placeholder="Book Title"
               ref={titleRef}
               required
-              maxLength={20}
+              maxLength={50}
             />
             <input
               type="text"

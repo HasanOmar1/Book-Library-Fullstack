@@ -1,6 +1,4 @@
-import React from "react";
 import "./LinksToPages.css";
-import { Link } from "react-router-dom";
 import AuthorCards from "../AuthorCards/AuthorCards";
 
 export default function LinksToAuthorPages() {
