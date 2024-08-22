@@ -103,7 +103,9 @@ export default function BookDetails() {
       <div className="description">
         <h3>About</h3>
         <p>
-          {newState?.description ? newState?.description : state?.description}
+          {console.log(state)}
+          {newState?.description ??
+            state?.content.join("").slice(0, 350) + "..."}
         </p>
       </div>
 
