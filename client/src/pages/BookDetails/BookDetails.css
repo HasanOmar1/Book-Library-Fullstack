@@ -272,8 +272,17 @@
 }
 
 @media (max-width: 767px) {
+  .BookDetails .info-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .BookDetails .info-container .img-container {
+    margin-left: -50px;
+  }
   .BookDetails .info-container img {
-    display: none;
+    width: 200px;
+    height: 200px;
   }
   .BookDetails .more-info-container {
     margin-left: -80px;
