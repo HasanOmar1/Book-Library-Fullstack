@@ -38,6 +38,7 @@ I have created a responsive book library using React for the frontend and MongoD
 - There is a category for books added by people.
 - You can check out books written by well known authors.
 - There are Fairy Tales books.
+- Book of the day section changes every 24 hours.
 
 ---
 
