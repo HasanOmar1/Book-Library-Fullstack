@@ -2,9 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
 import "./OpenBook.css";
 import { useLocation } from "react-router-dom";
-// import Button from "react-bootstrap/Button";
-// import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
-// import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import messages from "./data";
 import OpenBookBtns from "../OpenBookBtns/OpenBookBtns";
 
@@ -114,11 +111,11 @@ function OpenBook() {
           <PageCover>
             <img
               src={
-                state?.imageLinks?.thumbnail.replace("zoom=1", "zoom=6")
-                  ? state?.imageLinks?.thumbnail.replace("zoom=1", "zoom=6")
-                  : state?.img
-                  ? state?.img
-                  : "https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"
+                state?.imageLinks?.thumbnail
+                  ?.replace("zoom=1", "zoom=6")
+                  .replace("http", "https") ??
+                state?.img ??
+                "https://st4.depositphotos.com/14953852/24787/v/450/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg"
               }
               alt={state?.title}
             />
