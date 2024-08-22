@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
 import "./OpenBook.css";
 import { useLocation } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
-import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+// import Button from "react-bootstrap/Button";
+// import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+// import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import messages from "./data";
+import OpenBookBtns from "../OpenBookBtns/OpenBookBtns";
 
 const PageCover = React.forwardRef(({ children }, ref) => {
   return (
@@ -138,60 +139,15 @@ function OpenBook() {
             <div className="cover-title">The End</div>
           </PageCover>
         </HTMLFlipBook>
-        <div className="btns-container">
-          <Button
-            variant="primary"
-            onClick={() => {
-              book.current.pageFlip().flipPrev();
-              handlePageChange(currentPageNum - 1);
-            }}
-          >
-            <KeyboardDoubleArrowLeftIcon className="double-arrow-icon" />
-            Previous Page
-          </Button>
-          <Button
-            variant="secondary"
-            onClick={() => {
-              book.current.pageFlip().flip(0);
-            }}
-          >
-            Start
-          </Button>
-
-          <form onSubmit={goToPage} className="go-container">
-            <input
-              className="goto-input"
-              type="number"
-              value={goToPageValue}
-              min={-1}
-              max={bookContent.length + 2}
-              onChange={(e) => setGoToPageValue(e.target.value)}
-            />
-            <Button variant="success" type="submit" className="goto-button">
-              Go
-            </Button>
-          </form>
-
-          <Button
-            className="end-btn"
-            variant="secondary"
-            onClick={() => {
-              book.current.pageFlip().flip(bookContent.length + 3);
-            }}
-          >
-            End
-          </Button>
-          <Button
-            variant="primary"
-            onClick={() => {
-              book.current.pageFlip().flipNext();
-              handlePageChange(currentPageNum + 1);
-            }}
-          >
-            Next Page
-            <KeyboardDoubleArrowRightIcon className="double-arrow-icon" />
-          </Button>
-        </div>
+        <OpenBookBtns
+          book={book}
+          bookContent={bookContent}
+          currentPageNum={currentPageNum}
+          goToPage={goToPage}
+          goToPageValue={goToPageValue}
+          handlePageChange={handlePageChange}
+          setGoToPageValue={setGoToPageValue}
+        />
       </div>
     </section>
   );

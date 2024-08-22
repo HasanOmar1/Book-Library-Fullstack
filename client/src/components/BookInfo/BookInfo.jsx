@@ -64,11 +64,7 @@ const BookInfo = ({ newState, state, addToLibraryFunction }) => {
         <div className="small-p">
           <h5>
             <span>
-              {newState?.pageCount
-                ? newState?.pageCount
-                : state?.content?.length
-                ? state?.content?.length
-                : "UnKnown"}
+              {newState?.pageCount ?? state?.content?.length ?? "UnKnown"}
             </span>
           </h5>
           <p>Pages</p>
