@@ -69,12 +69,11 @@ export default function BooksByCategories({ categoryName, array }) {
                 </h6>
                 <div className="pages-rating">
                   <h6 className="pages">
-                    {books?.volumeInfo?.pageCount
-                      ? books?.volumeInfo?.pageCount
-                      : books?.content?.length
-                      ? books?.content?.length
-                      : 211}{" "}
-                    Pages
+                    {`${
+                      books?.volumeInfo?.pageCount ??
+                      Math.ceil(books?.content.join("").length / 702) ??
+                      0
+                    } Pages`}
                   </h6>
                   <div className="rating">
                     <StarsRating

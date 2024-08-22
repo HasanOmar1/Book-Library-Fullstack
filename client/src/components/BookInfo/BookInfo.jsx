@@ -64,7 +64,9 @@ const BookInfo = ({ newState, state, addToLibraryFunction }) => {
         <div className="small-p">
           <h5>
             <span>
-              {newState?.pageCount ?? state?.content?.length ?? "UnKnown"}
+              {newState?.pageCount ??
+                Math.ceil(state?.content.join("").length / 702) ??
+                "UnKnown"}
             </span>
           </h5>
           <p>Pages</p>
