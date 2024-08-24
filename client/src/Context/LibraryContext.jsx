@@ -6,17 +6,17 @@ const LibraryContext = createContext();
 
 export default function LibraryProvider({ children }) {
   const { currentLoggedUser } = useNewUsersContext();
-  const [booksErrorMsg, setBooksMsg] = useState();
+  const [booksErrorMsg, setBooksErrorMsg] = useState();
   const [libraryBooks, setLibraryBooks] = useState([]);
 
   async function addBookToLibrary(bookId) {
     try {
       await axios.put(`/books/addBook/${bookId}`, {});
       currentLoggedUser();
-      setBooksMsg("Book has been added to your library");
+      setBooksErrorMsg("Book has been added to your library");
     } catch (error) {
       console.log(error.response.data.message);
-      setBooksMsg(error.response.data.message);
+      setBooksErrorMsg("You must be logged in to do this action");
     }
   }
 
@@ -26,7 +26,7 @@ export default function LibraryProvider({ children }) {
       currentLoggedUser();
     } catch (error) {
       console.log(error.response.data.message);
-      setBooksMsg(error.response.data.message);
+      setBooksErrorMsg("You must be logged in to do this action");
     }
   }
 
@@ -34,10 +34,10 @@ export default function LibraryProvider({ children }) {
     try {
       await axios.put(`/fairy/addBook/${bookId}`, {});
       currentLoggedUser();
-      setBooksMsg("Book has been added to your library");
+      setBooksErrorMsg("Book has been added to your library");
     } catch (error) {
       console.log(error.response.data.message);
-      setBooksMsg(error.response.data.message);
+      setBooksErrorMsg("You must be logged in to do this action");
     }
   }
 
@@ -56,7 +56,7 @@ export default function LibraryProvider({ children }) {
         removeBookFromLibrary,
         libraryBooks,
         setLibraryBooks,
-        setBooksMsg,
+        setBooksErrorMsg,
         booksErrorMsg,
         addFairyBookToLibrary,
         removeFairyBookFromLibrary,
