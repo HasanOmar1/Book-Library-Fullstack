@@ -16,7 +16,7 @@ export default function LibraryProvider({ children }) {
       setBooksErrorMsg("Book has been added to your library");
     } catch (error) {
       console.log(error.response.data.message);
-      setBooksErrorMsg("You must be logged in to do this action");
+      setBooksErrorMsg(error.response.data.message);
     }
   }
 
@@ -26,7 +26,7 @@ export default function LibraryProvider({ children }) {
       currentLoggedUser();
     } catch (error) {
       console.log(error.response.data.message);
-      setBooksErrorMsg("You must be logged in to do this action");
+      setBooksErrorMsg(error.response.data.message);
     }
   }
 
@@ -37,7 +37,7 @@ export default function LibraryProvider({ children }) {
       setBooksErrorMsg("Book has been added to your library");
     } catch (error) {
       console.log(error.response.data.message);
-      setBooksErrorMsg("You must be logged in to do this action");
+      setBooksErrorMsg(error.response.data.message);
     }
   }
 
