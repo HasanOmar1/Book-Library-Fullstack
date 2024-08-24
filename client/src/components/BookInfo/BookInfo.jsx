@@ -35,13 +35,9 @@ const BookInfo = ({ newState, state, addToLibraryFunction }) => {
       <div className="row-info">
         <div className="small-p">
           <h5>
-            {newState ? (
-              <>
-                <span>{newState?.categories}</span>
-              </>
-            ) : (
-              <span>{state?.categories}</span>
-            )}
+            <span>
+              {newState?.categories ? newState?.categories : state?.categories}
+            </span>
           </h5>
           <p>Categories</p>
         </div>
@@ -63,13 +59,10 @@ const BookInfo = ({ newState, state, addToLibraryFunction }) => {
         <hr className="divider" />
 
         <div className="small-p">
-          {newState ? (
-            <>
-              <span>{newState?.maturityRating.split("_").join(" ")}</span>
-            </>
-          ) : (
-            "Kids"
-          )}
+          <span>
+            {newState ? newState?.maturityRating.split("_").join(" ") : "Kids"}
+          </span>
+
           <h5></h5>
           <p>Maturity Rating</p>
         </div>
