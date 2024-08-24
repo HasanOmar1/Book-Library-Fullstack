@@ -8,29 +8,16 @@ const BookInfo = ({ newState, state, addToLibraryFunction }) => {
       <h4>{newState?.title ? newState?.title : state?.title}</h4>
       <div className="mid-info">
         <h5>
-          {newState ? (
-            <>
-              Written by
-              <span className="important-info">
-                {newState?.authors.join(" , ")}
-              </span>
-            </>
-          ) : (
-            <>
-              Written by
-              <span className="important-info">{state?.author}</span>
-            </>
-          )}
+          Written by
+          <span className="important-info">
+            {newState?.authors.join(" , ") ?? state?.author}
+          </span>
         </h5>
         <h5>
-          {newState ? (
-            <>
-              Published By
-              <span className="important-info">{newState?.publisher}</span>
-            </>
-          ) : (
-            ""
-          )}
+          Published By
+          <span className="important-info">
+            {newState?.publisher ? newState?.publisher : state?.author}
+          </span>
         </h5>
         <h5>
           {newState ? (
