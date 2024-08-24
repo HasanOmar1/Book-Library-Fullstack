@@ -35,7 +35,6 @@ export default function NewUsersProvider({ children }) {
     setLoginStatus(false);
     try {
       const response = await axios.post("/users/login", user);
-      currentLoggedUser();
       localStorage.setItem("token", response.data.token);
       setLoginStatus(true);
       navigate("/");
